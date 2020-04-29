@@ -17,6 +17,7 @@
       * {
         font-family: inherit;
         color: inherit;
+        box-sizing: border-box;
       }
 
       html,
@@ -73,13 +74,19 @@
       code {
         background: linear-gradient(to right, #d8f1f0, #fff);
         color: blue;
-        font-size: 0.8em;
         display: block;
+        font-size: 0.8em;
         padding: 0.3rem 0.4rem;
         border-radius: 0.2rem;
         font-family: 'Monaco', monospace;
-        white-space: nowrap;
+        white-space: pre;
         overflow: auto;
+      }
+
+      pre {
+        overflow: auto;
+        background: linear-gradient(to right, #d8f1f0, #fff);
+        color: blue;
       }
 
       @media screen and (max-width: 700px) {
@@ -125,15 +132,16 @@
         things I have built.
       </p>
 
-      <p>
-        <code>6CC3 7716 23A2 A6CD 373A 8C57 1168 F786 6D61 F5BA</code>
-        <small style="margin-top: 0;">
-          pks: <a
-            href="https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xc03b78c0cda6c90e119e28e59427e08ef972834a"
-            >ubuntu</a
-          >
-        </small>
+      <p class="code-wrapper" style="margin-bottom: 0;">
+        <code>6CC3 7716 23A2 A6CD 373A 8C57 1168 F786 6D61 F5BA </code>
       </p>
+      <small style="margin-top: 0;">
+        pks:
+        <a
+          href="https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xc03b78c0cda6c90e119e28e59427e08ef972834a"
+          >ubuntu</a
+        >
+      </small>
 
       <small>
         <a href="mailto:mail@abdus.xyz">mail@abdus.xyz</a>&nbsp;&nbsp;&middot;
