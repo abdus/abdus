@@ -37,6 +37,21 @@
       h6 {
         margin-top: 1rem;
         margin-bottom: 0.3rem;
+        position: relative;
+      }
+
+      h1 a,
+      h2 a,
+      h3 a,
+      h4 a,
+      h5 a,
+      h6 a {
+        position: absolute;
+        background-color: transparent;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
       }
 
       main {
@@ -74,43 +89,28 @@
         color: #a7a4a4;
       }
 
-      code {
+      code.highlighter-rouge {
+        padding: 0.1rem 0.2rem;
+        font-family: 'Roboto Mono', monospace;
+        background-color: #faeded;
+        color: #f70000;
+        border-radius: 0.2rem;
+        font-size: 0.8em;
+      }
+
+      pre.highlight {
+        border-radius: 0.2rem;
+        padding: 0.3rem 0.5rem;
+        font-family: 'Roboto Mono', monospace;
         background: linear-gradient(to right, #d8f1f0, #fff);
         color: #4343ec;
-        display: block;
         font-size: 0.8em;
-        padding: 0.3rem 0.4rem;
-        border-radius: 0.2rem;
-        font-family: 'Roboto Mono', monospace;
-        white-space: pre;
         overflow: auto;
-      }
-
-      pre {
-        overflow: auto;
-        background: linear-gradient(to right, #d8f1f0, #fff);
-        color: blue;
-      }
-
-      .project-wrapper {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 1.3rem;
-      }
-
-      .project small {
-        margin: 0;
-        color: gray;
       }
 
       @media screen and (max-width: 700px) {
         .top-fade-in {
           display: none;
-        }
-
-        .project-wrapper {
-          display: grid;
-          grid-template-columns: 1fr;
         }
       }
     </style>
@@ -118,25 +118,7 @@
   <body>
     <div class="top-fade-in"></div>
     <main>
-      <p class="links">
-        <a href="/">Home</a>
-        <a href="https://blog.abdus.xyz">Blog</a>
-        <a href="/snippets.html">Snippets</a>
-        <!-- <a href="https://github.com/thisisabdus">GitHub</a>
-        <a href="https://twitter.com/unsigned_32">Twitter</a>
-        <a href="https://www.linkedin.com/in/thisisabdus">LinkedIn</a>
-        <a href="https://dev.to/thisisabdus">DEV</a> -->
-      </p>
-
-      <strong>Scale Images to 100KB</strong>
-      <pre><code>$ find . -maxdepth 1 -iname "*.jpg" | xargs -L1 -I{} convert -strip -define jpeg:extent=100kb -colorspace Gray -auto-level -monitor  "{}" out/"{}"</code></pre>
-
-      <small>
-        <a href="mailto:mail@abdus.xyz">mail@abdus.xyz</a>&nbsp;&nbsp;&middot;
-        <a href="https://blog.abdus.xyz">blog</a>&nbsp;&nbsp;&middot;
-        <a href="https://license.abdus.xyz">license</a>&nbsp;&nbsp;&middot;
-        <a href="https://yellowfire.co">yellowfire.co</a>
-      </small>
+      {% include menu.html %} {{ content }}
     </main>
   </body>
 </html>

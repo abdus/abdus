@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<style>
+  main p {
+    margin: 0;
+  }
+
+  h4 {
+    margin-top: 3rem;
+    margin-bottom: 0.3rem;
+  }
+</style>
+
+<h2>{{ page.title }}</h2>
+<div style="color: gray;">{{ page.description }}</div>
+
+{% include anchor-headings.html html=content %}
