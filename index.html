@@ -8,8 +8,9 @@
       name="description"
       content="Abdus is a Web Developer living in India. He likes to work with JavaScript, React, Node.js etc ..."
     />
+
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Roboto+Slab:wght@400;700&display=swap"
       rel="stylesheet"
     />
 
@@ -44,8 +45,10 @@
         padding: 1rem;
       }
 
-      main p {
+      main p,
+      div.act-as-p {
         line-height: 1.6;
+        margin: 1.5rem 0;
       }
 
       .top-fade-in {
@@ -73,12 +76,12 @@
 
       code {
         background: linear-gradient(to right, #d8f1f0, #fff);
-        color: blue;
+        color: #4343ec;
         display: block;
         font-size: 0.8em;
         padding: 0.3rem 0.4rem;
         border-radius: 0.2rem;
-        font-family: 'Monaco', monospace;
+        font-family: 'Roboto Mono', monospace;
         white-space: pre;
         overflow: auto;
       }
@@ -89,9 +92,25 @@
         color: blue;
       }
 
+      .project-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1.3rem;
+      }
+
+      .project small {
+        margin: 0;
+        color: gray;
+      }
+
       @media screen and (max-width: 700px) {
         .top-fade-in {
           display: none;
+        }
+
+        .project-wrapper {
+          display: grid;
+          grid-template-columns: 1fr;
         }
       }
     </style>
@@ -142,6 +161,30 @@
           >ubuntu</a
         >
       </small>
+
+      <p>&nbsp;<!--- BLANK SPACE --></p>
+
+      <!-- <div class="act-as-p">
+        <h2>From GitHub</h2>
+
+        <div class="project-wrapper">
+          <div class="project">
+            <a href="https://github.com/thisisabdus/chat-app">Chat App</a>
+            <small>
+              A monimal chat-app using socket.io and Node.js. It supports
+              multi-channel messaging.
+            </small>
+          </div>
+
+          <div class="project">
+            <a href="https://github.com/thisisabdus/movie-wiki">Movie Wiki</a>
+            <small>
+              React web app built for searching movies of all genres using
+              theMovieDB API.
+            </small>
+          </div>
+        </div>
+      </div> -->
 
       <small>
         <a href="mailto:mail@abdus.xyz">mail@abdus.xyz</a>&nbsp;&nbsp;&middot;
