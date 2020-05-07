@@ -43,3 +43,14 @@ userSchema.pre('save', function (next) {
   return next();
 });
 ```
+
+#### Load Image based on Color Preference
+
+Save some bandwidth and load only required images using pure HTML(No JavaScript).
+
+```js
+<picture>
+  <source srcset='night.jpg' media='(prefers-color-scheme: dark)' />
+  <img src='day.jpg' />
+</picture>
+```
