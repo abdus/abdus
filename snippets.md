@@ -54,3 +54,4 @@ Save some bandwidth and load only required images using pure HTML(No JavaScript)
   <img src='day.jpg' />
 </picture>
 ```
+
