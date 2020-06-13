@@ -1,6 +1,6 @@
 ---
 title: "Misc"
-draft: true
+draft: false
 ---
 
 Nothing Here Yet!

@@ -1,6 +1,6 @@
 ---
 title: "Linux"
-draft: true
+draft: false
 ---
 
 Nothing Here yet!
