@@ -1,0 +1,61 @@
+{{ $pathname := $.Page.Permalink | relURL | lower }}
+
+<section id="nav-wrapper">
+  <nav>
+      <a 
+          href={{ $.Site.Params.baseURL | absURL }} 
+          style="font-weight: bolder;" class="logo"
+      >
+        Abdus.
+      </a>
+    <input
+      type="checkbox"
+      name="menu-handler"
+      id="menu-handler"
+      style="display: none;"
+    />
+    <label for="menu-handler" class="mobile-only menu-icon">
+      <div></div>
+      <div></div>
+      <div></div>
+    </label>
+
+    <div class="menu">
+      {{ if (eq $pathname "/")}}
+      <a href="/" class="active">Home</a>
+      {{ else }}
+      <a href="/">Home</a>
+      {{ end }}
+      <!--  -->
+
+      {{ if (eq $pathname "/resources")}}
+      <a href="/resources" class="active">Resources</a>
+      {{ else }}
+      <a href="/resources">Resources</a>
+      {{ end }}
+      <!--  -->
+
+
+      {{ if (eq $pathname "/blogs")}}
+      <a href="/blogs" class="active">Archive</a>
+      {{ else }}
+      <a href="/blogs">Archive</a>
+      {{ end }}
+      <!--  -->
+
+
+      {{ range (where $.Site.RegularPages "Section" "pages") }}
+      <!--  -->
+      {{ $pagepath := print "/" .Title "/" | lower }}
+      <!--  -->
+      <!--  -->
+      {{ if (eq $pathname $pagepath )}}
+      <a href="{{ .Permalink }}" class="active">{{ .Title }}</a>
+      {{ else }}
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+      {{ end }}
+      <!--  -->
+      {{ end }}
+    </div>
+  </nav>
+</section>

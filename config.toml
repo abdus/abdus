@@ -1,0 +1,12 @@
+baseURL = "https://abdus.xyz"
+languageCode = "en-us"
+title = "Abdus S. Azad"
+
+theme = "reek"
+
+
+[markup]
+[markup.tableOfContents]
+endLevel = 6
+ordered = false
+startLevel = 1
