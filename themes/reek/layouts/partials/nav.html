@@ -21,11 +21,11 @@
     </label>
 
     <div class="menu">
-      {{ if (eq $pathname "/")}}
-      <a href="/" class="active">Home</a>
-      {{ else }}
-      <a href="/">Home</a>
-      {{ end }}
+      <!--{{ if (eq $pathname "/")}}-->
+      <!--<a href="/" class="active">Home</a>-->
+      <!--{{ else }}-->
+      <!--<a href="/">Home</a>-->
+      <!--{{ end }}-->
       <!--  -->
 
       {{ if (eq $pathname "/resources")}}
@@ -43,6 +43,9 @@
       {{ end }}
       <!--  -->
 
+
+      <a href="http://resume.abdus.xyz" class="active">Resume</a>
+      <!--  -->
 
       {{ range (where $.Site.RegularPages "Section" "pages") }}
       <!--  -->

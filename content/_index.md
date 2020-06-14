@@ -40,6 +40,8 @@ Send encrypted mail at [mail@abdus.xyz](mailto:mail@abdus.xyz).
 
 ## Social
 
+- **Email**: [mail@abdus.xyz](mailto:mail@abdus.xyz)
 - **Twitter**: [@unsigned_32](https://twitter.com/@unsigned_32)
 - **Github**: [@thisisAbdus](https://github.com/thisisabdus)
 - **LinkedIn**: [in/thisisAbdus](https://www.linkedin.com/in/thisisabdus)
+- **DEV**: [dev.to/abdus](https://dev.to/abdus)
