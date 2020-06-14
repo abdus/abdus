@@ -18,10 +18,11 @@
         {{.Content}}
     </article>
 
+    <ul>
     <!-- Ranges through content/posts/*.md -->
     {{ range .Pages }}
 
-    <div
+    <li
         style="
             margin-top: 0.4rem;
             line-height: 1.5;
@@ -45,8 +46,9 @@
         {{ end }}
         <!-- -->
         
-    </div>
+    </li>
 
     {{ end }}
+    </ul>
 </main>
 {{ end }}

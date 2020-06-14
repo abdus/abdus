@@ -44,6 +44,47 @@
         {{ if .TableOfContents }}
         <label id="mobile-only-toc-handler">Table of Content</label>
         {{ end }}
+        <!-- -->
+
+        {{ if or .PrevInSection .NextInSection }}
+
+        <div 
+            style="
+                margin-top: 4rem;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 0.9em;
+                font-weight: bold;
+            "
+        >
+
+
+        {{ if .NextInSection }}
+        <a 
+            style="padding: 1rem;border: 1px solid slateblue;"
+            href="{{ .NextInSection.Permalink }}"
+        >
+            {{ .NextInSection.Title }}
+        </a>
+        
+        {{ end }}
+
+        <!-- -->
+
+        {{ if .PrevInSection }}
+        <a 
+            style="padding: 1rem;border: 1px solid slateblue;"
+            href="{{ .PrevInSection.Permalink }}"
+        >
+            {{ .PrevInSection.Title }}
+        </a>
+        {{ end }}
+
+        </div>
+
+        {{ end }}
     </main>
     {{ if .TableOfContents }}
     <aside id="aside-table-of-content">

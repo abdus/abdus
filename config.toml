@@ -10,3 +10,14 @@ theme = "reek"
 endLevel = 6
 ordered = false
 startLevel = 1
+
+[markup.highlight]
+codeFences = false
+guessSyntax = true
+hl_Lines = ""
+lineNoStart = 1
+lineNos = true
+lineNumbersInTable = false
+noClasses = false
+#style = "friendly"
+tabWidth = 4
