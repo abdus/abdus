@@ -8,6 +8,6 @@ draft: false
 - Floating Point Guide: A website which explains how computer
 stores a floating point number [floating-point-gui.de](https://floating-point-gui.de/)
 
-#### Random tlTools
+#### Random Tools
 
 - Text to Handwriting - [text-to-handwriting](https://saurabhdaware.github.io/text-to-handwriting/)
