@@ -1,5 +1,5 @@
 ---
-title: "Get Your Own Heroku - a Guide on How to Run a Custom 'Platform as a Service' for deploying Apps"
+title: "Get Your Own Heroku - a Guide on How to Run a Custom 'PaaS' for deploying Apps"
 date: 2020-04-26T11:05:04+05:30
 draft: false
 tags: ['paas', 'heroku', 'node.js', 'vps', 'custom platform']
