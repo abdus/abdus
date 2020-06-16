@@ -1,5 +1,4 @@
-
-{{ define "main" }}
+{{ define "main" }} 
 
 <main id="layout_page" style="margin: auto;">
     <article style="margin-bottom: 1rem;">
@@ -18,37 +17,50 @@
         {{.Content}}
     </article>
 
-    <ul>
+    <div style="padding: 0 1rem;">
     <!-- Ranges through content/posts/*.md -->
     {{ range .Pages }}
+    <!-- -->
+    {{ $firstchar := substr .Title 0 1 }}
 
-    <li
-        style="
-            margin-top: 0.4rem;
-            line-height: 1.5;
+    <!-- -->
+    <div style="
+            font-size: 1.4em;
+            font-weight: bold;
+            margin: 1rem 0 0 0;
+            line-height: 1;
+            color: #2e5055;
         "
     >
-        <a
-            style=" 
+        {{ $firstchar }}
+    </div>
+    <!--<li-->
+    <!--style="-->
+    <!--margin-top: 0.4rem;-->
+    <!--line-height: 1.5;-->
+    <!--"-->
+    <!-->-->
+    <a
+        style=" 
                 font-size: 1.1em;
                 text-decoration: none;
                 border: none;
                 font-weight: 900;
             "
-            href="{{.Permalink}}"
-            >{{ .Title }}</a
-        >
-        {{ if (isset .Params "date") }}
-        <br />
-        <small style="min-width: 120px;font-weight: bold;"
-            >{{ .Date.Format "2 Jan, 2006" }}</small
-        >
-        {{ end }}
-        <!-- -->
-        
-    </li>
+        href="{{.Permalink}}"
+        >{{ .Title }}</a
+    >
+    {{ if (isset .Params "date") }}
+    <br />
+    <small style="min-width: 120px;font-weight: bold;"
+        >{{ .Date.Format "2 Jan, 2006" }}</small
+    >
+    {{ end }}
+    <!-- -->
+
+    <!--</li>-->
 
     {{ end }}
-    </ul>
+    </div>
 </main>
 {{ end }}
