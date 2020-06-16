@@ -19,11 +19,25 @@
 
     <div style="padding: 0 1rem;">
     <!-- Ranges through content/posts/*.md -->
+    <!-- -->
     {{ range .Pages }}
     <!-- -->
-    {{ $firstchar := substr .Title 0 1 }}
+    {{ .Scratch.Set "firstchar" (substr .Title 0 1 | lower) }}
+    {{ .Scratch.Set "prevchar" "" }}
+    {{ .Scratch.Set "writechar" true }}
 
-    <!-- -->
+    {{ if .NextInSection }}
+    {{ .Scratch.Set "prevchar" (substr .NextInSection.Title  0 1 | lower) }}
+    {{ end }}
+
+
+    {{ if eq (.Scratch.Get "prevchar") (.Scratch.Get "firstchar") }}
+    {{ .Scratch.Set "writechar" false }}
+    {{ else }}
+    {{ .Scratch.Set "writechar" true }}
+    {{ end }}
+
+    {{ if eq (.Scratch.Get "writechar") true }}
     <div style="
             font-size: 1.4em;
             font-weight: bold;
@@ -32,8 +46,9 @@
             color: #2e5055;
         "
     >
-        {{ $firstchar }}
+    {{ .Scratch.Get "firstchar" | upper }} 
     </div>
+    {{ end }}
     <!--<li-->
     <!--style="-->
     <!--margin-top: 0.4rem;-->
@@ -46,6 +61,7 @@
                 text-decoration: none;
                 border: none;
                 font-weight: 900;
+                display: block;
             "
         href="{{.Permalink}}"
         >{{ .Title }}</a
