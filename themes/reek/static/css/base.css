@@ -65,6 +65,7 @@ main#layout_page {
     max-width: 50rem;
     width: 100%;
     padding: 1rem;
+    min-height: 80vh;
     /*color: darkslategray;*/
 }
 
@@ -234,8 +235,8 @@ nav:not(#TableOfContents) .menu a {
 
 /*nav:not(#TableOfContents) .menu a:hover,*/
 /*nav:not(#TableOfContents) .menu a.active {*/
-    /*[>background-color: #fff;<]*/
-    /*[>color: #000;<]*/
+/*[>background-color: #fff;<]*/
+/*[>color: #000;<]*/
 /*}*/
 
 @media (max-width: 700px) {
@@ -295,7 +296,7 @@ nav:not(#TableOfContents) .menu a {
 }
 
 /*.highlight {*/
-    /*background-color: transparent;*/
+/*background-color: transparent;*/
 /*}*/
 
 .highlight,
@@ -308,7 +309,7 @@ code {
 }
 
 /*pre {*/
-    /*padding: 0 0.5rem;*/
+/*padding: 0 0.5rem;*/
 /*}*/
 
 code:not(.highlight) {
@@ -320,4 +321,17 @@ code:not(.highlight) {
     .highlight .lntd:first-child {
         display: none;
     }
+}
+
+footer {
+    max-width: 60rem;
+    padding: 1rem;
+    font-size: 0.9em;
+    margin: auto;
+    color: #005d6c;
+}
+
+footer a {
+    color: inherit;
+    border-bottom: 1px dashed #005d6c;
 }

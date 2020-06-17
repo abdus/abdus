@@ -8,26 +8,19 @@ I am Abdus. I am Fullstack Web Developer, mainly focused on Back-End
 technologies. Apart from web development, I am interested in
 **Cloud Computing**, **Open Source Software** and **GNU/Linux**.
 
-Currently, I am building [stacktrend.io](https://stacktrend.io),
-which would eventually become a beginner-focused programming blog!
-
 ## Jump To
 
-#### [Archive](/blogs) &nbsp; &middot; &nbsp; [Resources](/resources)
+#### [Archive](/blogs) &nbsp; &middot; &nbsp; [Resources](/resources) &nbsp; &middot; &nbsp; [Notes](/notes)
 
 ## Uses
 
 - **Editor:** NeoVim(primary)/Visual Studio Code
-[config: [neovim](https://github.com/thisisabdus/dotfiles/blob/master/.config/nvim/init.vim)
-&middot;
-[vs code](https://github.com/thisisabdus/dotfiles/blob/master/vscode-settings.json)]
-- **ColorSchema:** Palenight.vim [[source](https://github.com/drewtempelmeyer/palenight.vim)]
-- **OS:** Arch Linux w/ SwayWM [config: [swaywm](https://github.com/thisisabdus/dotfiles/tree/master/.config/sway)]
+- **ColorSchema:** Palenight.vim
+- **OS:** Arch Linux w/ SwayWM
 - **Terminal/Shell:** Alacritty/Z-Shell
-[config: [alacritty](https://github.com/thisisabdus/dotfiles/blob/master/.config/alacritty/alacritty.yml)
-&middot;
-[zshrc](https://github.com/thisisabdus/dotfiles/blob/master/.zshrc)]
-- **Font:** Iosevka Nerd Font [[download](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Iosevka)]
+- **Font:** Iosevka Nerd Font
+
+_config files can be found at [thisisAbdus/dotfiles](https://github.com/thisisabdus/dotfiles)_
 
 ## Fingerprint
 
