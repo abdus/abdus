@@ -4,7 +4,6 @@ title = "Abdus S. Azad"
 
 theme = "reek"
 
-
 [markup]
 [markup.tableOfContents]
 endLevel = 6
@@ -12,11 +11,11 @@ ordered = false
 startLevel = 1
 
 [markup.highlight]
-codeFences = false
+codeFences = true
 guessSyntax = true
 hl_Lines = ""
 lineNoStart = 1
-lineNos = true
+lineNos = false
 lineNumbersInTable = false
 noClasses = false
 #style = "friendly"

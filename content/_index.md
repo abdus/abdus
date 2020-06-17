@@ -12,6 +12,22 @@ technologies. Apart from web development, I am interested in
 
 #### [Archive](/blogs) &nbsp; &middot; &nbsp; [Resources](/resources) &nbsp; &middot; &nbsp; [Notes](/notes)
 
+## Fingerprint
+
+My PGP fingerprint is `EB39 66E3 7BA3 DFD8`. Public key can be found at OpenPGP keyserver.
+Download key  [0xEB3966E37BA3DFD8](https://keys.openpgp.org/search?q=0xEB3966E37BA3DFD8)
+from OpenPGP keyserver.
+
+```sh
+# import key
+$ gpg --keyserver keys.openpgp.org --recv-keys 0xEB3966E37BA3DFD8
+```
+
+## Projects
+
+- __Chat App__: A chat application built using NodeJS, JavaScript, MongoDB and
+Express. [source](https://github.com/thisisabdus/chat-app) - [live](https://quick-chat.now.sh)
+
 ## Uses
 
 - **Editor:** NeoVim(primary)/Visual Studio Code
@@ -21,15 +37,6 @@ technologies. Apart from web development, I am interested in
 - **Font:** Iosevka Nerd Font
 
 _config files can be found at [thisisAbdus/dotfiles](https://github.com/thisisabdus/dotfiles)_
-
-## Fingerprint
-
-```text
-6CC3 7716 23A2 A6CD 373A 8C57 1168 F786 6D61 F5BA
-```
-
-Public keyserver is [keyserver.ubuntu.com](https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xc03b78c0cda6c90e119e28e59427e08ef972834a).
-Send mail at mail@abdus.xyz.
 
 ## Social
 

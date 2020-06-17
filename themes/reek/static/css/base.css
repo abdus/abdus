@@ -306,11 +306,12 @@ code {
     /*font-size: 1.4rem;*/
     overflow: auto;
     margin: 0 0 0.5rem 0;
+    line-height: 1.5;
 }
 
-/*pre {*/
-/*padding: 0 0.5rem;*/
-/*}*/
+pre {
+    padding: 0 0.5rem;
+}
 
 code:not(.highlight) {
     color: papayawhip;
