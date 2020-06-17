@@ -29,7 +29,7 @@ _config files can be found at [thisisAbdus/dotfiles](https://github.com/thisisab
 ```
 
 Public keyserver is [keyserver.ubuntu.com](https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xc03b78c0cda6c90e119e28e59427e08ef972834a).
-Send encrypted mail at [mail@abdus.xyz](mailto:mail@abdus.xyz).
+Send mail at mail@abdus.xyz.
 
 ## Social
 
