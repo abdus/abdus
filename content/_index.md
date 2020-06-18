@@ -8,8 +8,6 @@ I am Abdus. I am Fullstack Web Developer, mainly focused on Back-End
 technologies. Apart from web development, I am interested in
 **Cloud Computing**, **Open Source Software** and **GNU/Linux**.
 
-## Jump To
-
 #### [Archive](/blogs) &nbsp; &middot; &nbsp; [Resources](/resources) &nbsp; &middot; &nbsp; [Notes](/notes)
 
 ## Fingerprint

@@ -11,7 +11,7 @@ html {
 
 body {
     margin: 0;
-    font-family: "Merriweather", sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 1.1rem;
     line-height: 2;
     background: #242a38;
@@ -27,7 +27,7 @@ a {
     color: inherit;
     text-decoration: none;
     transition: 0.3s ease color;
-    color: #f54b64;
+    color: #7c4dff;
 }
 
 main a:hover {
@@ -75,12 +75,13 @@ main#layout_page h3,
 main#layout_page h4,
 main#layout_page h5,
 main#layout_page h6 {
-    margin-top: 1.4em;
-    margin-bottom: 0.6rem;
+    margin-top: 4rem;
+    margin-bottom: 1.4rem;
     font-weight: 900;
     color: #ffffff;
     /*font-size: 1.2em;*/
     line-height: 1.3;
+    font-family: "Merriweather", serif;
 }
 
 main#layout_page h4,
@@ -104,7 +105,7 @@ main#layout_page .title {
     margin: 0;
     line-height: 1.2;
     font-weight: 900;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Merriweather", sans-serif;
     /*color: darkslategray;*/
 }
 
@@ -113,6 +114,7 @@ main#layout_page #tags small {
     padding: 0.2rem 0.4rem;
     margin-right: 0.2rem;
     border-radius: 0.2rem;
+    font-family: 'Merriweather';
 }
 
 main#layout_page ~ aside {
@@ -162,7 +164,7 @@ main#layout_page label#mobile-only-toc-handler {
 #TableOfContents a.active {
     /*background-color: #dceff9;*/
     /*color: #0e66d6;*/
-    color: #f54b64;
+    color: #7c4dff;
     /*font-weight: bold;*/
 }
 
@@ -218,6 +220,7 @@ nav:not(#TableOfContents) .logo {
     font-weight: bold;
     font-size: 1.2em;
     text-decoration: none;
+    color: #fff;
 }
 
 nav:not(#TableOfContents) .menu {
@@ -261,6 +264,7 @@ nav:not(#TableOfContents) .menu a {
 
     nav:not(#TableOfContents) .menu a {
         margin-left: 0;
+        padding: 0.5rem 0;
     }
 
     nav:not(#TableOfContents) #menu-handler:checked ~ .menu {
