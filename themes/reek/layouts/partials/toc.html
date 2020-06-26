@@ -1,0 +1,44 @@
+<strong><small>IN THIS PAGE</small></strong>
+{{ .TableOfContents }}
+
+<script>
+  "use strict";
+
+  function highlight_toc(id) {
+    const url_hash = new URL(window.location.href).hash;
+    const current_target = document.querySelector(
+      `${id} a[href="${url_hash}"]`
+    );
+    const all_targets = [
+      ...document.querySelectorAll(`${id} #TableOfContents a`)
+    ];
+
+    all_targets.forEach(ele => ele.classList.remove("active"));
+    current_target && current_target.classList.add("active");
+  }
+
+  try {
+    (() => {
+      const toc_menu = document.querySelector("#aside-table-of-content");
+      highlight_toc("#aside-table-of-content");
+      window.addEventListener("hashchange", () =>
+        highlight_toc("#aside-table-of-content")
+      );
+    })();
+  } catch (err) {
+    console.log(err.message);
+  }
+
+  try {
+    (() => {
+      const toc_menu = document.querySelector("#mobile-table-of-content");
+      highlight_toc("#mobile-table-of-content");
+      window.addEventListener("hashchange", () =>
+        highlight_toc("#mobile-table-of-content")
+      );
+    })();
+  } catch (err) {
+    console.log(err.message);
+  }
+
+</script>

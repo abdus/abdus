@@ -1,141 +1,99 @@
 {{ define "main" }}
 
 <div id="wrapper">
-    <main id="layout_page">
-        <h1 class="title">
-            {{ .Title }}
-        </h1>
+  <main id="layout_page">
+    <h1 class="title">
+      {{ .Title }}
+    </h1>
 
-        {{ if (isset .Params "date") }}
+    {{ if (isset .Params "date") }}
 
-        <time
-            style="
+    <time
+      style="
                 font-size: 0.8em; 
                 margin-bottom: 2rem;
                 display: block;
                 font-weight: bold;
             "
+    >
+      {{ .Date.Format "2 January, 2006" }} &nbsp;&middot;&nbsp;
+      <!-- -->
+      {{ .ReadingTime }} min
+    </time>
+
+    {{ else }}
+
+    <div style="margin-bottom: 2rem;"></div>
+
+    {{ end }}
+    <!--c-->
+
+    <div
+      id="mobile-table-of-content"
+      style="margin: 1rem 0 1rem 0; padding: 1rem;border: 3px dashed black;"
+    >
+      {{ partial "toc.html" . }}
+    </div>
+
+    {{ .Content }}
+
+    <div id="tags">
+      {{ range .Params.tags }}
+      <small>
+        <a
+          style="text-decoration: none;color: blue;border: none;"
+          href="{{ $.Site.Params.baseURL | absURL }}/tags/{{ . }}"
+          >#{{ . }}</a
         >
-        {{ .Date.Format "2 January, 2006" }} 
-        &nbsp;&middot;&nbsp;
-        {{ .ReadingTime }} min
-        </time>
+      </small>
+      {{ end }}
+    </div>
 
-        {{ else }}
+    {{ if or .PrevInSection .NextInSection }}
 
-        <div style="margin-bottom: 2rem;"></div>
-
-        {{ end }}
-        <!--c-->
-        {{ .Content }}
-
-        <div id="tags">
-            {{ range .Params.tags }}
-            <small>
-                <a
-                    style="text-decoration: none;color: blue;border: none;"
-                    href="{{ $.Site.Params.baseURL | absURL }}/tags/{{ . }}"
-                    >#{{ . }}</a
-                >
-            </small>
-            {{ end }}
-        </div>
-
-        {{ if .TableOfContents }}
-        <label id="mobile-only-toc-handler">Table of Content</label>
-        {{ end }}
-        <!-- -->
-
-        {{ if or .PrevInSection .NextInSection }}
-
-        <div 
-            style="
-                margin-top: 4rem;
+    <div
+      style="
+                margin-top: 10rem;
                 display: grid;
                 grid-template-columns: 1fr 1fr;
-                text-align: center;
                 text-transform: uppercase;
                 font-size: 0.9em;
                 font-weight: bold;
             "
-        >
+    >
+      {{ if .NextInSection }}
+      <a
+        style="
+            padding: 0 1rem;
+            border-right: 1px solid gray;
+            text-decoration: none;
+          "
+        href="{{ .NextInSection.Permalink }}"
+      >
+        « {{ .NextInSection.Title }}
+      </a>
 
+      {{ end }}
 
-        {{ if .NextInSection }}
-        <a 
-            style="padding: 1rem;border: 1px solid slateblue;"
-            href="{{ .NextInSection.Permalink }}"
-        >
-            {{ .NextInSection.Title }}
-        </a>
-        
-        {{ end }}
+      <!-- -->
 
-        <!-- -->
+      {{ if .PrevInSection }}
+      <a
+        style="padding: 0 1rem;text-align: right;text-decoration: none;"
+        href="{{ .PrevInSection.Permalink }}"
+      >
+        {{ .PrevInSection.Title }} »
+      </a>
+      {{ end }}
+    </div>
 
-        {{ if .PrevInSection }}
-        <a 
-            style="padding: 1rem;border: 1px solid slateblue;"
-            href="{{ .PrevInSection.Permalink }}"
-        >
-            {{ .PrevInSection.Title }}
-        </a>
-        {{ end }}
-
-        </div>
-
-        {{ end }}
-    </main>
-    {{ if .TableOfContents }}
-    <aside id="aside-table-of-content">
-        <strong><small>IN THIS PAGE</small></strong>
-        {{ .TableOfContents }}
-
-        <script>
-            "use strict";
-
-            function highlight_toc() {
-                const url_hash = new URL(window.location.href).hash;
-                const current_target = document.querySelector(
-                    `a[href="${url_hash}"]`
-                );
-                const all_targets = [
-                    ...document.querySelectorAll("#TableOfContents a")
-                ];
-
-                all_targets.forEach(ele => ele.classList.remove("active"));
-                current_target && current_target.classList.add("active");
-            }
-
-            (() => {
-                const toc_menu = document.querySelector(
-                    "#aside-table-of-content"
-                );
-                highlight_toc();
-                window.addEventListener("hashchange", highlight_toc);
-            })();
-
-            (() => {
-                const elem = document.querySelector("#mobile-only-toc-handler");
-                const toc_menu = document.querySelector(
-                    "#aside-table-of-content"
-                );
-                if (elem && toc_menu) {
-                    elem.addEventListener("click", () => {
-                        toc_menu.classList.add("active");
-                    });
-                }
-
-                if (toc_menu) {
-                    toc_menu.addEventListener("click", e => {
-                        e.stopPropagation();
-                        toc_menu.classList.remove("active");
-                    });
-                }
-            })();
-        </script>
-    </aside>
     {{ end }}
+  </main>
+  {{ if .TableOfContents }}
+  <aside id="aside-table-of-content">
+    {{ partial "toc.html" . }}
+  </aside>
+  {{ end }}
 </div>
 
 {{ end }}

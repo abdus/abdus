@@ -1,7 +1,7 @@
 {{ $pathname := $.Page.Permalink | relURL | lower }}
 
 <section id="nav-wrapper">
-  <nav>
+  <nav id="top-nav">
       <a 
           href={{ $.Site.Params.baseURL | absURL }} 
           style="font-weight: bolder;" class="logo"
