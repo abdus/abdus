@@ -166,3 +166,10 @@ for hosting apps.
 
 The only downside I could think of is, I have to look after the server.
 This is won't be a big deal, thanks to AWS ❤️
+
+
+```rs
+fn main() {
+  println("I love Rust");
+}
+```

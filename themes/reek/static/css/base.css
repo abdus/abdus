@@ -16,28 +16,90 @@ html {
 }
 
 body {
+  font-family: "Roboto", sans-serif;
   margin: 0;
-  font-family: "Charter", serif;
-  font-size: 1.3rem;
-  line-height: 1.4;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  color: #141414;
 }
 
-pre, code, .highlight {
-  font-family: 'IBM Plex Mono', monospace;
+a {
+  border-bottom: 1px dashed red;
+  text-decoration: none;
+  transition: 0.4s ease all;
+}
+
+a:hover {
+  color: red;
+  border-bottom: none;
+}
+
+pre,
+code,
+.highlight {
+  font-family: "IBM Plex Mono", monospace;
   font-size: 0.95em;
-
 }
 
+.highlight {
+  overflow: auto;
+  border-radius: 0.4rem;
+}
+
+code {
+  padding: 2px 4px;
+  border: 1px solid #f1c6b7;
+  border-radius: 0.3rem;
+  font-size: 0.8em;
+}
+
+.highlight code {
+  border: none;
+  font-size: unset;
+  color: unset;
+}
+
+pre.chroma {
+  margin: 0;
+  padding: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 3rem 0 0.4rem 0;
+  font-family: "Charter", serif;
+}
+
+h1 ~ p,
+h2 ~ p,
+h3 ~ p,
+h4 ~ p,
+h5 ~ p,
+h6 ~ p {
+  margin-top: 0;
+}
+
+.title,
+.title-font {
+  font-family: "Charter", serif;
+}
 #top-nav {
+  font-family: "Charter";
   max-width: 60rem;
   margin: auto;
   padding: 1rem;
   display: flex;
   align-items: baseline;
+  margin-bottom: 2rem
 }
 
 #top-nav a {
   text-decoration: none;
+  border: none;
 }
 
 #top-nav .menu {
@@ -58,6 +120,7 @@ pre, code, .highlight {
   margin: auto;
   padding: 0 1rem;
   overflow: unset;
+  line-height: 1.8;
 }
 
 #wrapper #layout_page {
@@ -78,29 +141,24 @@ pre, code, .highlight {
   align-self: flex-start;
 }
 
-.highlight {
-  overflow: auto;
-  border-radius: 0.4rem;
-}
-
-pre.chroma {
-  margin: 0;
-  padding: 0.7rem;
-}
-
 #mobile-table-of-content {
   display: none;
 }
 
+#aside-table-of-content {
+  border-left: 1px solid lightgray;
+  padding-left: 2rem;
+}
+
 @media (max-width: 750px) {
   #wrapper {
-    grid-template-columns: 1fr
+    grid-template-columns: 1fr;
   }
 
   #mobile-table-of-content {
     display: block;
   }
-  
+
   #aside-table-of-content {
     display: none;
   }
@@ -118,6 +176,7 @@ pre.chroma {
 
 #TableOfContents li a {
   text-decoration: none;
+  border: none;
 }
 
 #TableOfContents li a.active {

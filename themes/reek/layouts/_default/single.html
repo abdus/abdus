@@ -30,6 +30,7 @@
 
     <div
       id="mobile-table-of-content"
+      class="title-font"
       style="margin: 1rem 0 1rem 0; padding: 1rem;border: 3px dashed black;"
     >
       {{ partial "toc.html" . }}
@@ -90,7 +91,7 @@
     {{ end }}
   </main>
   {{ if .TableOfContents }}
-  <aside id="aside-table-of-content">
+  <aside id="aside-table-of-content" class="title-font">
     {{ partial "toc.html" . }}
   </aside>
   {{ end }}
