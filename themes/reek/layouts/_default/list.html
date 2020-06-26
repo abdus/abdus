@@ -26,30 +26,41 @@
             line-height: 1.5;
         "
     >
+      {{ if (isset .Params "date") }}
+      <small
+        style="
+            min-width: 120px;
+            font-weight: bold;
+            font-family: 'Charter';
+            color: red;
+            text-transform: uppercase;
+          "
+        >{{ .Date.Format "2 Jan, 2006" }}</small
+      >
+      {{ end }}
+      <!-- -->
+      <br />
       <a
         style=" 
                 font-size: 1.1em;
                 text-decoration: none;
                 border: none;
                 font-weight: 900;
+                font-family: 'Charter';
+                line-height: 1.2;
             "
         href="{{.Permalink}}"
         >{{ .Title }}</a
       >
-      {{ if (isset .Params "date") }}
-      <br />
-      <small style="min-width: 120px;font-weight: bold;"
-        >{{ .Date.Format "2 Jan, 2006" }}</small
-      >
-      {{ end }}
-      <!-- -->
+
       {{ if .Summary }}
       <br />
       <div
         style="
                 line-height: 1.6;
                 font-size: 0.9em;
-                margin-top: 0.4rem; 
+                margin-top: 0.4rem;
+                color: gray;
             "
       >
         {{ .Summary | truncate 200 }}

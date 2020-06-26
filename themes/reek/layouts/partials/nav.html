@@ -43,6 +43,12 @@
       {{ end }}
       <!--  -->
 
+      {{ if (eq $pathname "/screenshots")}}
+      <a href="/screenshots" class="active">Screenshots</a>
+      {{ else }}
+      <a href="/screenshots">Screenshots</a>
+      {{ end }}
+      <!--  -->
 
       <a href="http://resume.abdus.xyz" class="active">Resume</a>
       <!--  -->

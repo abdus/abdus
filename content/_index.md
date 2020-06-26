@@ -2,8 +2,6 @@
 title: "Home"
 ---
 
-## Hello!
-
 I am Abdus, a web developer. I like building things using JavaScript mostly.
 I am a huge fan of GNU/Linux and an Open-Source enthusiast.
 
