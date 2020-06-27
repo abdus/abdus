@@ -9,9 +9,21 @@
         </h1>
       </header>
     </article>
-    {{ range .Resources.ByType "image" }}
-    <li><a href="{{ .Permalink }}">{{ .Name }}</a></li>
-    {{ end }}
+    <div>
+      {{ range .Resources.ByType "image" }}
+      <!-- -->
+      <div style="display: flex;align-items: center;">
+        {{ $img := .Fill "20x20" }}
+        <!-- -->
+        <img
+          src="{{ $img.Permalink }}"
+          alt="{{ .Name }}"
+          style="margin-right: 10px;"
+        />
+        <a href="{{ .Permalink }}" style="border: none;">{{ .Name }}</a>
+      </div>
+      {{ end }}
+    </div>
   </main>
 </div>
 

@@ -1,0 +1,66 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+logo_url: https://develop.stacktrend.io/images/cms_logo.png
+media_folder: static/images
+public_folder: /images
+collections:
+  - name: 'blog'
+    label: 'Blog'
+    folder: 'content/blogs'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Date', name: 'date', widget: 'datetime' }
+      - { label: 'Draft', name: 'draft', widget: 'boolean', default: true }
+      - label: 'Meta'
+        name: 'meta'
+        widget: 'object'
+        collapsed: false
+        required: false
+        fields:
+          - { label: 'Image', name: 'image', widget: 'image', required: false }
+          - {
+              label: 'Description',
+              name: 'description',
+              widget: 'string',
+              required: false,
+            }
+      - { label: 'Tags', name: 'tags', widget: 'list' }
+      - { label: 'Categories', name: 'categories', widget: 'list' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'page'
+    label: 'Pages'
+    folder: 'content/pages'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Date', name: 'date', widget: 'datetime' }
+      - { label: 'Draft', name: 'draft', widget: 'boolean', default: true }
+      - label: 'Meta'
+        name: 'meta'
+        widget: 'object'
+        collapsed: false
+        required: false
+        fields:
+          - { label: 'Image', name: 'image', widget: 'image', required: false }
+          - {
+              label: 'Description',
+              name: 'description',
+              widget: 'string',
+              required: false,
+            }
+      - {
+          label: 'Table of contents',
+          name: 'tableofcontents',
+          widget: 'boolean',
+          default: true,
+          required: false,
+        }
+      - { label: 'Body', name: 'body', widget: 'markdown' }

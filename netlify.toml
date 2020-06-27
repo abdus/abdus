@@ -1,0 +1,8 @@
+[build]
+base = "."
+publish = "./public"
+command = "hugo --gc --minify --path-warnings --i18n-warnings"
+
+[context.production.environment]
+HUGO_VERSION = "0.71.1"
+HUGO_ENV = "production"

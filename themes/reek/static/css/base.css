@@ -16,17 +16,17 @@ html {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", sans-serif;
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1.15em;
   line-height: 1.7;
+  /*font-weight: bold;*/
   color: #141414;
 }
 
 a {
-  border-bottom: 1px dashed red;
+  border-bottom: 2px dashed red;
   text-decoration: none;
-  transition: 0.4s ease all;
 }
 
 a:hover {
@@ -99,7 +99,6 @@ blockquote {
 }
 
 #top-nav {
-  font-family: "Charter";
   max-width: 60rem;
   margin: auto;
   padding: 1rem;

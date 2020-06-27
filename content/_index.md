@@ -15,16 +15,6 @@ Download key  [`0xEB3966E37BA3DFD8`](https://keys.openpgp.org/search?q=0xEB3966E
 $ gpg --keyserver keys.openpgp.org --recv-keys 0xEB3966E37BA3DFD8
 ```
 
-### Uses
-
-- **Editor:** NeoVim(primary)/Visual Studio Code
-- **ColorSchema:** Palenight.vim
-- **OS:** Arch Linux w/ SwayWM
-- **Terminal/Shell:** Alacritty/Z-Shell
-- **Font:** Iosevka Nerd Font
-
-_config files can be found at [thisisAbdus/dotfiles](https://github.com/thisisabdus/dotfiles)_
-
 ### Social
 
 [mail@abdus.xyz](mailto:mail@abdus.xyz) &middot; 
