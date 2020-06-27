@@ -1,0 +1,102 @@
+---
+title: "Home"
+---
+
+<!--<h1 style="margin-top: 0;">About.</h1>-->
+<img
+  src="https://avatars3.githubusercontent.com/u/32123917"
+  alt=""
+  id="image-me"
+  style="
+        float: right;
+        border-radius: 50%;
+        box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02),
+                    0 6.7px 5.3px rgba(0, 0, 0, 0.028),
+                    0 12.5px 10px rgba(0, 0, 0, 0.035),
+                    0 22.3px 17.9px rgba(0, 0, 0, 0.042),
+                    0 41.8px 33.4px rgba(0, 0, 0, 0.05),
+                    0 100px 80px rgba(0, 0, 0, 0.07);
+          "
+/>
+
+<span class="drop-cap">H</span>ello. I am Abdus, a final-year undergrad and a
+passionate developer. I have been working with web technologies for around 3+
+years! Apart from web technologies, I like to play around with GNU/Linux,
+support open-source technologies with all my heart, and code in Rust.
+Cryptography excites me very much!
+
+<p>
+  I am <a href="https://github.com/thisisabdus">good at JavaScript</a> and its
+  ecosystem. I am well-versed in coding back-end with Node.js. For database I
+  prefer to use MongoDB, but I am educated in SQL as well. PostgreSQL among all
+  other SQL database is my favourite!
+</p>
+
+<h3>Social.</h3>
+
+I have profiles in couple of social media accounts. Here I am listing them for
+your convenience.
+
+<div class="social-links">
+  <a href="mailto:mail@abdus.xyz?subject=Hello"
+    ><i class="fas fa-envelope-square"></i
+  ></a>
+  <a href="https://github.com/thisisabdus"
+    ><i class="fab fa-github-square"></i
+  ></a>
+  <a href="https://twitter.com/unsigned_32"
+    ><i class="fab fa-twitter-square"></i
+  ></a>
+  <a href="https://linkedin.com/in/thisisabdus"
+    ><i class="fab fa-linkedin"></i
+  ></a>
+  <a href="https://dev.to/abdus"><i class="fab fa-dev"></i></a>
+  <a href="https://keys.openpgp.org/search?q=0xEB3966E37BA3DFD8"
+    ><i class="fas fa-key"></i
+  ></a>
+</div>
+
+<h3>PGP Key.</h3>
+
+I have my PGP key uploaded to <code>keys.openpgp.org</code> with key-id
+<code>0xEB3966E37BA3DFD8</code>. You can directly download the public key
+<a href="https://keys.openpgp.org/search?q=0xEB3966E37BA3DFD8">from here</a>.
+Key fingerprint is <code>EB39 66E3 7BA3 DFD8</code>
+
+<div style="clear: both;"></div>
+
+<script>
+  (function() {
+    const head = document.querySelector("head");
+    const css = `
+      .drop-cap {
+        font-size: 4.5rem;
+        float: left;
+        line-height: 0.8;
+        font-family: "Charter", serif;
+      }
+
+      .social-links a {
+        border: none;
+        margin-right: 8px;
+        font-size: 1.5em;
+        transition: 0.3s ease color;
+      }
+
+      #image-me {
+        max-width: 200px;
+        margin-left: 3px;
+      }
+
+      @media (max-width: 700px) {
+        #image-me {
+          max-width: 100px;
+        }
+      }
+    `;
+    const style = document.createElement("style");
+
+    style.innerHTML = css;
+    head.appendChild(style);
+  })();
+</script>

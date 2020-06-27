@@ -101,10 +101,11 @@ blockquote {
 #top-nav {
   max-width: 60rem;
   margin: auto;
-  padding: 1rem;
+  padding: 1.5rem 1rem;
   display: flex;
   align-items: baseline;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  font-family: "Charter", serif;
 }
 
 #top-nav a {
