@@ -1,7 +1,6 @@
 backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
-logo_url: https://develop.stacktrend.io/images/cms_logo.png
 media_folder: static/images
 public_folder: /images
 collections:
