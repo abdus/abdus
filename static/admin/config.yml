@@ -1,5 +1,6 @@
 backend:
   name: github
+  repo: thisisabdus/abdus.xyz
   branch: master # Branch to update (optional; defaults to master)
 media_folder: static/images
 public_folder: /images
