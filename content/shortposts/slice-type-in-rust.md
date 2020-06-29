@@ -1,7 +1,7 @@
 ---
 title: "Slice Type in Rust"
 date: 2020-06-29T19:59:10+05:30
-draft: true
+draft: false
 ---
 <!--
 // Outline
