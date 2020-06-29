@@ -8,7 +8,7 @@
   box-sizing: border-box;
   font-family: inherit;
   color: inherit;
-  background: inherit;
+  /*background: inherit;*/
 }
 
 html {
@@ -42,8 +42,9 @@ code,
 }
 
 .highlight {
-  overflow: auto;
   border-radius: 0.4rem;
+  overflow: auto;
+  margin-bottom: 2rem;
 }
 
 code {
@@ -61,7 +62,11 @@ code {
 
 pre.chroma {
   margin: 0;
+  border-radius: 0.4rem;
+  display: table;
+  width: 100%;
   padding: 1rem;
+  overflow: auto;
 }
 
 h1,
@@ -90,7 +95,7 @@ h6 ~ p {
 
 blockquote {
   margin: 2rem 0;
-  font-family: 'Charter', serif;
+  font-family: "Charter", serif;
   font-size: 1.2em;
   line-height: 1.5;
   color: gray;
