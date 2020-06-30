@@ -1,5 +1,60 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+{{ if .Params.meta.description }}
+<!-- -->
+{{ .Scratch.Set "desc" .Params.meta.description }}
+<!-- -->
+{{ else }}
+<!-- -->
+{{ .Scratch.Set "desc" .Summary }}
+<!-- -->
+{{ end }}
+<!-- -->
+
+{{ if .Params.meta.image }}
+<!-- -->
+{{ .Scratch.Set "image" .Params.meta.image }}
+<!-- -->
+{{ else }}
+<!-- -->
+{{ .Scratch.Set "image" "/images/_does-not-exists.png" }}
+<!-- -->
+{{ end }}
+
+<!-- Meta Tags -->
+<meta name="description" content="{{ .Scratch.Get "desc" }}">
+<!-- -->
+
+<meta name="title" content="{{ .Page.Title }} | {{ .Site.Title }}" />
+<meta name="description" content="desc" />
+<meta
+  name="keywords"
+  content="tech, programming, javascript, react, rust, nodejs, node, mongodb, postgresql"
+/>
+<meta name="robots" content="index, follow" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="language" content="English" />
+<meta name="revisit-after" content="2 days" />
+<meta name="author" content="Abdus <mail@abdus.xyz>" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ .Permalink | absURL }}" />
+<meta property="og:title" content="{{ .Page.Title }} | {{ .Site.Title }}" />
+<meta property="og:description" content='{{ .Scratch.Get "desc" }}' />
+<meta property="og:image" content='{{ .Scratch.Get "image" }}' />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content="{{ .Permalink | absURL }}" />
+<meta
+  property="twitter:title"
+  content="{{ .Page.Title }} | {{ .Site.Title }}"
+/>
+<meta property="twitter:description" content='{{ .Scratch.Get "desc" }}' />
+<meta property="twitter:image" content='{{ .Scratch.Get "image" }}' />
+
 <title>{{ .Page.Title }} | {{ .Site.Title }}</title>
 <link rel="stylesheet" type="text/css" href={{ "css/syntax.css" | relURL }} />
 <link rel="stylesheet" type="text/css" href={{ "css/base.css" | relURL }} />

@@ -55,7 +55,7 @@
 /* KeywordDeclaration */
 .chroma .kd {
   color: #8be9fd;
-  font-style: italic;
+  /*font-style: italic;*/
 }
 /* KeywordNamespace */
 .chroma .kn {
@@ -83,7 +83,7 @@
 /* NameBuiltin */
 .chroma .nb {
   color: #8be9fd;
-  font-style: italic;
+  /*font-style: italic;*/
 }
 /* NameBuiltinPseudo */
 .chroma .bp {

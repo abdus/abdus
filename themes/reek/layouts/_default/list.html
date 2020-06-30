@@ -6,8 +6,8 @@
       <header>
         <h1
           style="
-                    margin: 0;
-                    font-size: 1.8em;
+                  margin: 0;
+                  font-size: 1.8em;
                 "
         >
           {{.Title}}
@@ -42,12 +42,12 @@
       <br />
       <a
         style=" 
-                font-size: 1.1em;
-                text-decoration: none;
-                border: none;
-                font-weight: 900;
-                font-family: 'Charter';
-                line-height: 1.2;
+              font-size: 1.1em;
+              text-decoration: none;
+              border: none;
+              font-weight: 900;
+              font-family: 'Charter';
+              line-height: 1.2;
             "
         href="{{.Permalink}}"
         >{{ .Title }}</a
@@ -57,10 +57,10 @@
       <br />
       <div
         style="
-                line-height: 1.6;
-                font-size: 0.9em;
-                margin-top: 0.4rem;
-                color: gray;
+              line-height: 1.6;
+              font-size: 0.9em;
+              margin-top: 0.4rem;
+              color: gray;
             "
       >
         {{ .Summary | truncate 200 }}
@@ -70,5 +70,6 @@
 
     {{ end }}
   </main>
+  <aside>{{ partial "social.html" }}</aside>
 </div>
 {{ end }}
