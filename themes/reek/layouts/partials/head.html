@@ -18,7 +18,7 @@
 <!-- -->
 {{ else }}
 <!-- -->
-{{ .Scratch.Set "image" "/images/_does-not-exists.png" }}
+{{ .Scratch.Set "image" ("/images/_does-not-exists.png" | absURL) }}
 <!-- -->
 {{ end }}
 
