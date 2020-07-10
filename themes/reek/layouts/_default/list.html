@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<div id="wrapper">
+<div id="wrapper" style="display: block;">
   <main id="layout_page">
     <article style="margin-bottom: 1rem;">
       <header>
@@ -22,54 +22,49 @@
 
     <div
       style="
-            margin-top: 1.5rem;
-            line-height: 1.5;
+            border-bottom: 1px dotted lightgray;
+            line-height: 1.4;
+            font-size: 0.9em;
+            padding: 0.7rem 0;
         "
     >
-      {{ if (isset .Params "date") }}
-      <small
-        style="
-            min-width: 120px;
-            font-weight: bold;
-            font-family: 'Charter';
-            color: #4db7b7;
-            text-transform: uppercase;
-          "
-        >{{ .Date.Format "2 Jan, 2006" }}</small
-      >
-      {{ end }}
-      <!-- -->
-      <br />
       <a
         style=" 
-              font-size: 1.1em;
               text-decoration: none;
               border: none;
-              font-weight: 900;
-              font-family: 'Charter';
-              line-height: 1.2;
+              margin-right: 0.4rem;
+              color: #141414;
             "
         href="{{.Permalink}}"
         >{{ .Title }}</a
       >
 
-      {{ if .Summary }}
-      <br />
-      <div
+      {{ if (isset .Params "date") }}
+      <small
         style="
-              line-height: 1.6;
-              font-size: 0.9em;
-              margin-top: 0.4rem;
-              color: gray;
-            "
+            min-width: 120px;
+            color: gray;
+          "
+        >{{ .Date.Format "2 Jan, 2006" }}</small
       >
-        {{ .Summary | truncate 200 }}
-      </div>
       {{ end }}
+      <!-- -->
+      <!--{{ if .Summary }}-->
+      <!--<br />-->
+      <!--<div-->
+      <!--style="-->
+      <!--line-height: 1.6;-->
+      <!--font-size: 0.9em;-->
+      <!--margin-top: 0.4rem;-->
+      <!--color: gray;-->
+      <!--"-->
+      <!-->-->
+      <!--{{ .Summary | truncate 200 }}-->
+      <!--</div>-->
+      <!--{{ end }}-->
     </div>
 
     {{ end }}
   </main>
-  <aside>{{ partial "social.html" }}</aside>
 </div>
 {{ end }}
