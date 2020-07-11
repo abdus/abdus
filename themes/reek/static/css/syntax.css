@@ -114,7 +114,7 @@
 /* NameLabel */
 .chroma .nl {
   color: #8be9fd;
-  font-style: italic;
+  /*font-style: italic;*/
 }
 /* NameNamespace */
 .chroma .nn {
@@ -132,22 +132,22 @@
 /* NameVariable */
 .chroma .nv {
   color: #8be9fd;
-  font-style: italic;
+  /*font-style: italic;*/
 }
 /* NameVariableClass */
 .chroma .vc {
   color: #8be9fd;
-  font-style: italic;
+  /*font-style: italic;*/
 }
 /* NameVariableGlobal */
 .chroma .vg {
   color: #8be9fd;
-  font-style: italic;
+  /*font-style: italic;*/
 }
 /* NameVariableInstance */
 .chroma .vi {
   color: #8be9fd;
-  font-style: italic;
+  /*font-style: italic;*/
 }
 /* NameVariableMagic */
 .chroma .vm {
