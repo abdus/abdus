@@ -48,8 +48,7 @@ if you want to publish your recording to ASCIINema website. If not, save it loca
 - Embeddable. Following is a asciicast of my NeoVim config :)
 {{< asciinema id="dCji7muVN6wBBcmqIAQtdLN4H" >}}
 - copy and paste texts from an asciicast to terminal. this especially helps when
-you don't want to type a goddamn config file from a video because you friend is
-too much of an asshole to use platform like github.
+you don't want to type a goddamn config file from a video.
 - remote ASCIINema upload server can be self-hosted.
 
 Guess that much of features are enough to convince you :)
