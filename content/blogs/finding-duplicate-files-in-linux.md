@@ -1,14 +1,19 @@
 ---
-title: 'Finding Duplicate Files in Linux - The Hard Way'
-date: 2020-07-11T21:53:45+05:30
 draft: false
 meta:
-  image: # url to image. Important for blog listing and seo
-  description: "Creating a simple duplicate file finder with an algorithmic approach using GNU Bash. This post is focused on how coding something by keeping algorithmic thinking in mind would make it better"
-featured: false # feature a post in homepage
-tableofcontents: true # whether to generate ToC
-tags: ['algorithms', 'bash']
-categories: ['linux']
+  image: /images/a41f9d00c5c8b8890d2d5788cf19a801.jpg
+  description: Creating a simple duplicate file finder with an algorithmic
+    approach using GNU Bash. This post is focused on how coding something by
+    keeping algorithmic thinking in mind would make it better
+featured: false
+title: Finding Duplicate Files in Linux - The Hard Way
+date: 2020-07-11T21:53:45+05:30
+tags:
+  - algorithms
+  - bash
+categories:
+  - linux
+tableofcontents: true
 ---
 
 Duplicate files, in Layman's term, are the files which are exactly a copy of
