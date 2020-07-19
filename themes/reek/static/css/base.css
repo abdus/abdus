@@ -46,6 +46,7 @@ code,
   border-radius: 0.4rem;
   overflow: auto;
   margin-bottom: 2rem;
+  line-height: 1.4;
 }
 
 code {
