@@ -14,7 +14,7 @@
 
 {{ if .Params.meta.image }}
 <!-- -->
-{{ .Scratch.Set "image" .Params.meta.image }}
+{{ .Scratch.Set "image" (.Params.meta.image | absURL) }}
 <!-- -->
 {{ else }}
 <!-- -->
