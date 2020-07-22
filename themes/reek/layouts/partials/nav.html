@@ -36,6 +36,13 @@
       <!--  -->
 
 
+      {{ if (eq $pathname "/works")}}
+      <a href="/works" class="active">Works</a>
+      {{ else }}
+      <a href="/works">Works</a>
+      {{ end }}
+      <!--  -->
+
       {{ if (eq $pathname "/blogs")}}
       <a href="/blogs" class="active">Blog</a>
       {{ else }}
