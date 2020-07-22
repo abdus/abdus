@@ -9,30 +9,6 @@ I am a supporter of Open-Source. I also like to play around with GNU/Linux.
 
 📝 I blog at [abdus.xyz/](https://abdus.xyz/blogs) <br/>
 
-
-### Uses
-
-- OS
-  - Arch Linux
-    - Wayland
-    - SwayWM
-    - Waybar
-  - Window 10
-- Editor
-  - NeoVim (Primary)
-  - Visual Studio Code
-  - GNU Nano
-- Languages
-  - JavaScript
-    - React
-    - Node
-  - Rust
-  - Shell Scripting
-  - SQL
-- Database
-  - MongoDB
-  - PostgreSQL
-
 ### Contact
 
 You can contact me using [LinkedIn](https://linkedin.com/in/thisisabdus), [Twitter](https://twitter.com/unsigned_32) or via my email [mail@abdus.xyz](mailto:mail@abdus.xyz).
