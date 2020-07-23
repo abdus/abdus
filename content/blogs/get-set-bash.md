@@ -148,24 +148,63 @@ Nothing much is going on in this script. First, I read the content of file `$FIL
 using `cat` utility command, then I **pipe** the output to `tr`, which ***essientially***
 replaces all comma characters with equal sign.
 
-## Conditionals
+## Logical Operators
+
+`&&`, `||`, `!` etc are known as **logical operators**. How these operators 
+work, could be demonstrated by using circuit gates and truth-table.
+
+`&&`(_a.k.a_ AND) **executes the right hand side expression only when the left
+hand side expression evalutes to true**. Similarly, `||` (_a.k.a_ OR) would
+execute left hand side. **If LHS evalutes to `false`, it would execute the
+right  hand side expression**. `!` (_a.k.a_ NOT) would simply **invert a
+given boolean value**.
+
+## Control Flows
 
 BASH provides conditionals out-of-the-box. Following are some example of `if`,
-`if..elif` etc:
+`if..elif` etc. There's nothing much to discuss about. If I find out any
+interesting edge cases, I will update them later on. For now, look at following
+codeblock to know about control-flows:
 
-### `if` statement
+> Bash treats empty strings as falsy value, much like any other sane language.
+
+### `if`, `if..else` and `if..elif`
 
 ```bash
+#!/bin/bash
+
 NAME="abdus"
 
+# if statement
 if [[ $NAME == "abdus" ]];
 then
   echo "Hello, $NAME";
 fi
+
+# if..else
+if [[ $NAME == "azad" ]];
+then
+  echo "Won't be printed"
+else
+  echo "Hello, $NAME"
+fi
+
+# if..elif
+if [[ $NAME == "hey" ]];
+then
+  echo "Not a Name"
+elif [[ $NAME == "azad" ]];
+then
+  echo "That's Last Name"
+else
+  echo "Hello, $NAME"
+fi
+
+# Note that one does not have to put
+# double square bracket around the 
+# condition all the time. TODO: write
+# how both are different
 ```
 
-### `if..else`
-
-### `if..elif`
 
 ## Loops
