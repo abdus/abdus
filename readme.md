@@ -3,6 +3,7 @@
 [![](https://img.shields.io/github/followers/abdus?color=%23181717&label=&logo=github&style=for-the-badge)](https://github.com/abdus)
 [![](https://img.shields.io/badge/-Connect-%230077B5?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/thisisabdus)
 [![](https://img.shields.io/twitter/follow/unsigned_32?color=%231DA1F2&label=&logo=twitter&logoColor=%23ffffff&style=for-the-badge)](https://linkedin.com/in/thisisabdus)
+[![](https://img.shields.io/badge/-WEBSITE-%2320252D?style=for-the-badge)](https://abdus.xyz)
 
 Hey, I am Abdus. I am interested in Full Stack development and Cloud Computing.
 I am a supporter of Open-Source. I also like to play around with GNU/Linux.
