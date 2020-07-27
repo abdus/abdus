@@ -1,14 +1,18 @@
 ---
+draft: false
+meta:
+  image: /images/262edf0c536be421bf4750d50673f523.jpg
+  description: null
+featured: false
 title: "'AbortController' in JS"
 date: 2020-07-26T21:51:49+05:30
-draft: true
-meta:
-  image: # url to image. Important for blog listing and seo
-  description: # overrides .Summary
-featured: false # feature a post in homepage
-tableofcontents: true # whether to generate ToC
-tags: [js, javascript, dom]
-categories: [web]
+tags:
+  - js
+  - javascript
+  - dom
+categories:
+  - web
+tableofcontents: true
 ---
 
 ## Intro
