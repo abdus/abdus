@@ -208,3 +208,40 @@ fi
 
 
 ## Loops
+
+Loops are a language feature which enables programmer to do a task repeatedly.
+Bash have four kind of loops, namely `for`, `while`, `until` and `select`.
+
+### TODO: Write about `break`, `continue` etc
+
+### `for` Loop
+
+For a given list, a for loop would go through each item and execute the enclosed
+code in loop's body. Example:
+
+```bash
+#!/bin/bash
+
+# VARIATION: 1
+# this script would list 
+# output of ls command 
+# separated by newline
+for item in `ls`;
+do
+  echo "NAME :: $item"
+done
+
+# VARIATION: 2
+# this would output given
+# array-like input
+for item in shell scripting is cool
+do
+  echo "$item"
+done
+```
+
+### `while` Loop
+
+### `until` Loop
+
+### `select` Loop

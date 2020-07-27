@@ -44,9 +44,10 @@ code,
 
 .highlight {
   border-radius: 0.4rem;
-  overflow: auto;
+  overflow: hidden;
   margin-bottom: 2rem;
-  line-height: 1.4;
+  line-height: 1.6;
+  margin: 1rem 0;
 }
 
 code {
@@ -60,13 +61,13 @@ code {
   border: none;
   font-size: unset;
   color: unset;
+  padding: 0;
 }
 
 pre.chroma {
   margin: 0;
   border-radius: 0.4rem;
-  display: table;
-  width: 100%;
+  min-width: 100%;
   padding: 1rem;
   overflow: auto;
 }
