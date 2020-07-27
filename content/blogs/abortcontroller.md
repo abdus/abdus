@@ -4,7 +4,7 @@ meta:
   image: /images/262edf0c536be421bf4750d50673f523.jpg
   description: null
 featured: false
-title: "'AbortController' in JS"
+title: "Terminating DOM Operations at will: 'AbortController' in JavaScript"
 date: 2020-07-26T21:51:49+05:30
 tags:
   - js
