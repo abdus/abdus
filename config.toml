@@ -1,0 +1,29 @@
+baseURL = "https://abdus.xyz"
+languageCode = "en-us"
+title = "Abdus S. Azad"
+
+theme = "0x32"
+disableKinds = ["posts"]
+enableGitInfo = true
+
+[markup]
+[markup.tableOfContents]
+endLevel = 6
+ordered = false
+startLevel = 1
+
+[markup.highlight]
+codeFences = true 
+guessSyntax = true
+hl_Lines = ''
+lineNoStart = 1
+lineNos = false
+lineNumbersInTable = false
+noClasses = false
+#style = "monokai"
+tabWidth = 2
+
+[permalinks]
+pages = "/:filename"
+blogs = "/:year/:title/"
+

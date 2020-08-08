@@ -1,0 +1,26 @@
+{{ define "main" }}
+
+<div style="text-align: center; margin: 3rem 0 3rem 0;">
+  <h2>{{.Title }}</h2>
+  {{ if .Date }}
+  <small>{{ .Date.Format "2 June, 2006" | upper }}</small>
+  {{ end }}
+</div>
+<div style="color: #252525;">
+  {{ .Content }}
+</div>
+
+<!--  List prev post and next post -->
+<div style="margin-top: 5rem;">
+  {{ if .NextInSection }}
+  <a href="{{ .NextInSection.Permalink }}" class="prev-next newer"
+    >&Larr;{{ .NextInSection.Title }}</a
+  >
+  {{ end }} {{ if .PrevInSection }}
+  <a href="{{ .PrevInSection.Permalink }}" class="prev-next older"
+    >{{ .PrevInSection.Title }}&Rarr;</a
+  >
+  {{ end }}
+</div>
+<!--.-->
+{{ end }}

@@ -1,0 +1,94 @@
+- name: accueil.vim
+  source: https://github.com/abdus/accueil.vim
+  demo: 
+  description: A NeoVim plugin for pretty much every unnoticable yet important things. Things like inserting peer characters, format simple texts etc can be done. (I built this plugin with an intent to learn Vimscript)
+  stack:
+    - vim
+    - neovim
+
+- name: Movie Wiki
+  source: https://github.com/abdus/movie-wiki
+  demo: https://abdus.github.io/movie-wiki/
+  description: A website build using React and TMDB API. This application pulls movie information from The Movie Database and renders in a nice, user-friendly way!
+  stack:
+    - react
+    - themoviedatabase
+
+- name: URL Shortener
+  source: https://github.com/abdus/url-shortener
+  demo: 
+  description: Simple URL Shortener web application built using Node.js and MongoDB. It was deployed at Heroku.
+  stack:
+    - html5
+    - css3
+    - node-dot-js
+    - mongodb
+    - heroku
+
+- name: Rust Notes
+  source: https://github.com/abdus/rust-notes
+  demo: https://rust.abdus.xyz
+  description: Rust Notes, as the title suggest. It contains all the important things a beginner Rustacean should know. Website is built with Jekyll and served by Vercel.
+  stack:
+    - rust
+    - jekyll
+    - vercel
+
+- name: ScrPad
+  source: https://github.com/abdus/scrpad
+  demo: https://scrpad.yellowfire.co
+  description: A simple WYSIWYG editor which enables user to download their content. It supports everything a WYSIWYG editor should have. Users could also use a background image as per their needs.
+  stack:
+    - html5
+    - css3
+    - javascript
+
+- name: Chat App
+  source: https://github.com/abdus/chat-app
+  demo:
+  description: Node.js based chat application. It have features like multiple chat rooms, Text to Speech etc. It also have spam protection which is done via email verification using Sendgrid.
+  stack:
+    - html5
+    - css3
+    - javascript
+    - node-dot-js
+    - socket-dot-io
+    - jsonwebtokens
+
+- name: Weather App
+  source: https://github.com/abdus/weather-app
+  demo: https://abdus.github.io/weather-app/
+  description: A web-app for finding out current weather based on user's location obtained via HTML5 Geolocation API. It fetches data from Free Code Camp's weather API.
+  stack:
+    - html5
+    - css3
+    - javascript
+    - freecodecamp
+
+- name: Pixel Art Maker
+  source: https://github.com/abdus/pixel-art-maker
+  demo: https://abdus.github.io/pixel-art-maker/
+  description: Built while doing Google India Scholarship on Udacity. It features a simple, not-so-good-looking UI for users to draw various arts using pixels.
+  stack:
+    - html5
+    - css3
+    - javascript
+
+- name: GH Head to Head
+  source: https://github.com/abdus/gh-head-to-head
+  demo: 
+  description: This is a web-app with basic functionalities of comparing upto four Github profiles. I built this web-app get get myself familiar with GraphQL.
+  stack:
+    - graphql
+    - github
+    - react
+    - apollographql
+
+- name: LinkClick
+  source: https://github.com/abdus/link-click
+  demo: 
+  description: Chrome extension for managing URLs and Links to different website. My first Project!
+  stack:
+    - html5
+    - css3
+    - googlechrome

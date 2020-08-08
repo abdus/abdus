@@ -1,0 +1,95 @@
+@font-face {
+  font-family: Monaco;
+  src: url('/fonts/monaco.ttf');
+}
+
+* {
+  font-family: inherit;
+  color: inherit;
+  background: inherit;
+}
+
+:root {
+  --max-content-width: 40rem;
+}
+
+ body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  font-family: Oxygen, 'Helvetica Neue', sans-serif;
+ }
+
+a:hover {
+  color: gray;
+}
+
+img {
+  max-width: 100%;
+  width: auto;
+}
+
+.chroma {
+  overflow: auto;
+  padding: 1rem;
+  border-radius: 0.3rem;
+  border: 1px solid #3f51b53b;
+}
+
+code {
+  font-family: Monaco, monospace;
+  padding: 1px 4px;
+  color: #a70000;
+  background: #dedede8f;
+  font-size: 0.9em;
+  border-radius: 0.2rem;
+}
+
+pre code {
+  padding: unset;
+  background: unset;
+  color: unset;
+  border-radius: unset;
+}
+
+blockquote {
+  /*border: 1px solid #6832ce;*/
+  /*border-left: 4px solid #6832ce;*/
+  color: #6832ce;
+  background: #6832ce14;
+  margin: 0;
+  padding: 1rem 1rem;
+  position: relative;
+  border-radius: 0.4rem;
+}
+
+blockquote * {
+  background: unset;
+  color: inherit;
+  margin: 0;
+} 
+
+/*blockquote::before {*/
+  /*content: "";*/
+  /*background: #6832ce;*/
+  /*position: absolute;*/
+  /*top: -0.8rem;*/
+  /*left: -0.8rem;*/
+  /*padding: 1rem;*/
+  /*border-radius: 50%;*/
+/*} */
+
+#content {
+   max-width: var(--max-content-width);
+   margin: auto;
+   padding: 0 1rem;
+ }
+
+.prev-next {
+  display: block; 
+}
+
+.prev-next.older {
+  text-align: right;
+}

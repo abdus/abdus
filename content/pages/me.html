@@ -1,0 +1,163 @@
+---
+title: "About Me"
+---
+
+<!--<h1 style="margin-top: 0;">About.</h1>-->
+<img
+  src="https://avatars3.githubusercontent.com/u/32123917"
+  alt=""
+  id="image-me"
+  style="
+        float: right;
+        border-radius: 50%;
+        box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02),
+                    0 6.7px 5.3px rgba(0, 0, 0, 0.028),
+                    0 12.5px 10px rgba(0, 0, 0, 0.035),
+                    0 22.3px 17.9px rgba(0, 0, 0, 0.042),
+                    0 41.8px 33.4px rgba(0, 0, 0, 0.05),
+                    0 100px 80px rgba(0, 0, 0, 0.07);
+          "
+/>
+
+<span class="drop-cap">H</span>ello. I am Abdus, a final-year undergrad and a
+passionate developer. I have been working with web technologies for around 3+
+years! Apart from web technologies, I like to play around with GNU/Linux,
+support open-source technologies with all my heart, and code in Rust.
+Cryptography excites me very much!
+
+<p>
+  I am <a href="https://github.com/abdus">good at JavaScript</a> and its
+  ecosystem. I am well-versed in coding back-end with Node.js. For database I
+  prefer to use MongoDB, but I am educated in SQL as well. PostgreSQL among all
+  other SQL database is my favourite!
+</p>
+
+<h3>Social.</h3>
+
+I have profiles in couple of social media platforms. Here I am listing them for
+your convenience.
+
+<div class="social-links">
+  <a href="mailto:mail@abdus.xyz?subject=Hello"
+    ><i class="fas fa-envelope-square"></i
+  ></a>
+  <a href="https://github.com/abdus"><i class="fab fa-github-square"></i></a>
+  <a href="https://twitter.com/unsigned_32"
+    ><i class="fab fa-twitter-square"></i
+  ></a>
+  <a href="https://linkedin.com/in/thisisabdus"
+    ><i class="fab fa-linkedin"></i
+  ></a>
+  <a href="https://dev.to/abdus"><i class="fab fa-dev"></i></a>
+  <a href="https://keys.openpgp.org/search?q=0xEB3966E37BA3DFD8"
+    ><i class="fas fa-key"></i
+  ></a>
+</div>
+
+<h3>PGP Key.</h3>
+
+I have my PGP key uploaded to <code>keys.openpgp.org</code> with key-id
+<code>0xEB3966E37BA3DFD8</code>. You can directly download the public key
+<a href="https://keys.openpgp.org/search?q=0xEB3966E37BA3DFD8">from here</a>.
+Key fingerprint is <code>EB39 66E3 7BA3 DFD8</code>
+
+<div style="clear: both;"></div>
+
+<!--<h3 style="margin-bottom: 1.5rem;">Recommendations</h3>-->
+<div id="recommendations">
+  <div style="max-width: 40rem; margin: auto;">
+    <p>
+      <i class="fas fa-quote-left"></i>
+      I have known Abdus for about 2 years now as he has helped me manage a
+      community of 80,000 programmers and engineers. I can always rely on Abdus
+      to be professional, but more importantly his work ethic and always being
+      available to help out with the community is what sets him apart. If you
+      have an opportunity to work with Abdus, you are among the lucky ones. One
+      of the most reliable people I know.
+    </p>
+    <em>— Andrei Neagoie - Founder, Zero to Mastery</em>
+
+    <p>
+      <i class="fas fa-quote-left"></i> Abdus is a geek and has a keen eye on
+      details. He has shown an amazingly high execution speed on the tasks
+      assigned. It surely will be an enriching experience to work with Abdus.
+    </p>
+    <em>— Devyesh Tandon - Co-Founder & CTO, Mailmodo</em>
+
+    <p>
+      <i class="fas fa-quote-left"></i>Abdus is one of the most sincere young
+      software engineer we have worked with. Besides being good at understanding
+      the problem, he goes deep in to looking for the solution himself. I am
+      sure with his hard work and grit, he is going to succeed always in his
+      life.
+    </p>
+    <em>— Aquibur Rahman - Founder, Mailmodo</em>
+  </div>
+</div>
+
+{{< skill-listing >}}
+
+<div style="text-align: center;margin-top: 3rem;">
+  <small
+    ><strong><em>btw, I use Arch™️</em></strong></small
+  >
+</div>
+
+
+<!-- -->
+<script>
+  (function() {
+    const head = document.querySelector("head");
+    const css = `
+      .drop-cap {
+        font-size: 4.5rem;
+        float: left;
+        line-height: 0.8;
+        font-family: "Charter", serif;
+      }
+
+      .social-links a {
+        border: none;
+        margin-right: 8px;
+        font-size: 1.5em;
+        transition: 0.3s ease color;
+      }
+
+      #image-me {
+        max-width: 200px;
+        margin-left: 3px;
+      }
+
+      @media (max-width: 700px) {
+        #image-me {
+          max-width: 150px;
+        }
+      }
+ 
+      #recommendations p {
+        margin: 4rem 0 0.3rem 0;
+        display: flex;
+        font-style: oblique;
+      }
+
+      #recommendations p {
+        font-size: 1em;
+      }
+      
+      #recommendations em {
+        font-weight: bold;
+        font-size: 0.9em;
+      }
+
+      #recommendations p i {
+        color: lightgray;
+        font-size: 3rem;
+        margin-right: 0.5rem;
+      }
+    `;
+    const style = document.createElement("style");
+
+    style.innerHTML = css;
+    head.appendChild(style);
+  })();
+</script>
