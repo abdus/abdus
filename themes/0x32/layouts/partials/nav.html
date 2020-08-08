@@ -1,9 +1,33 @@
+{{ $current_url := .Permalink | relURL }}
+<small class="top-nav">
+  {{ if eq $current_url "/" }}
+  <a class="active" href="/">~/</a>
+  {{ else }}
+  <a href="/">~/</a>
+  {{ end }}
+  <!--.-->
+  {{ if eq $current_url "/me/" }}
+  <a class="active" href="/me/">~/about</a>
+  {{ else }}
+  <a href="/me/">~/about</a>
+  {{ end }}
+  <!--.-->
+  {{ if eq $current_url "/keys/" }}
+  <a class="active" href="/keys/">~/keys</a>
+  {{ else }}
+  <a href="/keys/">~/keys</a>
+  {{ end }}
+  <!--.-->
+  <!--.-->
+</small>
+
 <a
   href='{{ "/" | absURL }} '
   style="text-align: center; display: block; margin-top: 3rem;"
 >
   <div class="logo"><span>#"</span><span>abdus.xyz</span><span>"</span></div>
 </a>
+
 <!--border: 1px solid lightgray;-->
 <style>
   div.logo {
@@ -23,5 +47,26 @@
 
   div.logo span:nth-child(2) {
     color: #796b01;
+  }
+
+  .top-nav {
+    display: block;
+    max-width: var(--max-content-width);
+    text-align: left;
+    padding: 0.3rem;
+    font-family: Monaco, monospace;
+    margin: auto;
+  }
+
+  .top-nav a {
+    font-size: 0.8em;
+    margin: 0 10px;
+    color: gray;
+    text-decoration: none;
+  }
+
+  .top-nav a.active {
+    color: #a70000;
+    font-weight: bold;
   }
 </style>

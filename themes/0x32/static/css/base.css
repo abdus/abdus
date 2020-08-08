@@ -54,8 +54,6 @@ pre code {
 }
 
 blockquote {
-  /*border: 1px solid #6832ce;*/
-  /*border-left: 4px solid #6832ce;*/
   color: #6832ce;
   background: #6832ce14;
   margin: 0;
@@ -70,15 +68,28 @@ blockquote * {
   margin: 0;
 } 
 
-/*blockquote::before {*/
-  /*content: "";*/
-  /*background: #6832ce;*/
-  /*position: absolute;*/
-  /*top: -0.8rem;*/
-  /*left: -0.8rem;*/
-  /*padding: 1rem;*/
-  /*border-radius: 50%;*/
-/*} */
+li:hover {
+  background: #EEEEEE;
+}
+
+table {
+  border-spacing: 0;
+  border: 1px solid lightgray;
+  border-right: 0; 
+}
+
+thead {
+  background: #c3c3c3;
+}
+
+td, th {
+  padding: 7px;
+  border-right: 1px solid lightgray;
+}
+
+tr:nth-child(even) {
+  background: #eeeeee;
+}
 
 #content {
    max-width: var(--max-content-width);
@@ -93,3 +104,5 @@ blockquote * {
 .prev-next.older {
   text-align: right;
 }
+
+

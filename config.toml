@@ -2,9 +2,10 @@ baseURL = "https://abdus.xyz"
 languageCode = "en-us"
 title = "Abdus S. Azad"
 
-theme = "0x32"
-disableKinds = ["posts"]
-enableGitInfo = true
+theme = "0x32"              # theme name
+disableKinds = ["section"]  # disable listings
+enableGitInfo = true        # valuable git information
+enableEmoji = true          # enables emoji support in content files
 
 [markup]
 [markup.tableOfContents]
@@ -20,7 +21,6 @@ lineNoStart = 1
 lineNos = false
 lineNumbersInTable = false
 noClasses = false
-#style = "monokai"
 tabWidth = 2
 
 [permalinks]

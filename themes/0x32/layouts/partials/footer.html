@@ -1,16 +1,26 @@
-<footer style="padding: 6rem 1rem 2rem 1rem;text-align: center;color: gray;">
+<footer style="padding: 6rem 1rem 2rem 1rem; text-align: center; color: gray;">
+  {{ partial "tiny-letter.html" }}
+  <!--.-->
   {{ if .GitInfo }}
 
   <small style="display: block;">
-    site updated on <strong>{{ .GitInfo.AuthorDate.Format "2 July, 2006" }}</strong>. 
-    commit hash: <a href='https://github.com/abdus/abdus/commit/{{ .GitInfo.Hash }}' style="text-decoration: none;"><code>{{ .GitInfo.AbbreviatedHash }}</code></a> message: <code>{{ .GitInfo.Subject }}</code>
+    <code>{{ .File.LogicalName }}</code> was last updated on
+    <code>{{ .GitInfo.AuthorDate.Format "2 July, 2006" }}</code>. Generated from
+    <a
+      target="_blank"
+      href="https://github.com/abdus/abdus/tree/{{ .GitInfo.Hash }}"
+      style="text-decoration: none;"
+      ><code>{{ .GitInfo.AbbreviatedHash }}</code></a
+    >
+    because of <code>{{ .GitInfo.Subject }}</code>
   </small>
   {{ end }}
-  
-  built with <a href="https://gohugo.io">hugo</a>,
-  <a href="https://github.com/neovim/neovim">neovim</a> and
-  <span style="color: red;">❤️ </span>
 
+  <small>
+    built with <a href="https://gohugo.io">hugo</a>,
+    <a href="https://github.com/neovim/neovim">neovim</a> and
+    <span style="color: red;">❤️ </span>
+  </small>
 </footer>
 
 <!--click-to-copy for code-blocks-->
@@ -18,7 +28,7 @@
   (() => {
     if (document.queryCommandSupported("copy")) {
       const codeBlocks = [...document.querySelectorAll(".highlight")];
-      codeBlocks.forEach(block => {
+      codeBlocks.forEach((block) => {
         block.querySelector("pre.chroma").style.paddingTop = "3rem";
 
         block.style.position = "relative";
@@ -58,7 +68,7 @@
 
         langCard.style.top = "0";
         langCard.style.left = "1rem";
-        langCard.style.color = "#ffffff"
+        langCard.style.color = "#ffffff";
         langCard.style.fontSize = "0.7em";
         langCard.style.position = "absolute";
         langCard.style.background = "#3f51b5";
@@ -75,16 +85,15 @@
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <!--<script-->
-  <!--async-->
-  <!--src="https://www.googletagmanager.com/gtag/js?id=UA-172322616-1"-->
+<!--async-->
+<!--src="https://www.googletagmanager.com/gtag/js?id=UA-172322616-1"-->
 <!--></script>-->
 <!--<script>-->
-  <!--window.dataLayer = window.dataLayer || [];-->
-  <!--function gtag() {-->
-    <!--dataLayer.push(arguments);-->
-  <!--}-->
-  <!--gtag("js", new Date());-->
+<!--window.dataLayer = window.dataLayer || [];-->
+<!--function gtag() {-->
+<!--dataLayer.push(arguments);-->
+<!--}-->
+<!--gtag("js", new Date());-->
 
-  <!--gtag("config", "UA-172322616-1");-->
-</script>
-
+<!--gtag("config", "UA-172322616-1");-->
+<!--</script>-->
