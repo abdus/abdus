@@ -3,7 +3,7 @@ languageCode = "en-us"
 title = "Abdus S. Azad"
 
 theme = "0x32"              # theme name
-disableKinds = ["section"]  # disable listings
+disableKinds = []           # disable stuffs
 enableGitInfo = true        # valuable git information
 enableEmoji = true          # enables emoji support in content files
 
@@ -26,4 +26,5 @@ tabWidth = 2
 [permalinks]
 pages = "/:filename"
 blogs = "/:year/:title/"
+notes = "/:year/:filename"
 

@@ -4,8 +4,9 @@ date: 2020-07-31T21:42:44+05:30
 draft: false
 tags: ["competitive programming", "ds & algo", "algorithms"]
 categories:
-  - Data Structures and Algorithms
-  - Algorithms
+  - dsa
+sources:
+  - https://www.geeksforgeeks.org/analysis-of-algorithms-set-1-asymptotic-analysis/
 ---
 
 

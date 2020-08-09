@@ -1,9 +1,9 @@
 ---
 title: "Registers in Vim"
-date: "Sun 26 Jul 2020 08:55:22 AM +0530"
+date: 2020-07-26T08:55:22+05:30
 draft: false
 tags: [vim, neovim, editor]
-categories: [vim]
+categories: [vim, neovim]
 ---
 
 - Registers in Vim are simply **different locations** where Vim could store texts.
