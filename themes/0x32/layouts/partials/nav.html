@@ -12,12 +12,17 @@
   <a href="/me/">~/about</a>
   {{ end }}
   <!--.-->
+  {{ if eq $current_url "/notes/" }}
+  <a class="active" href="/notes/">~/notes</a>
+  {{ else }}
+  <a href="/notes/">~/notes</a>
+  {{ end }}
+  <!--.-->
   {{ if eq $current_url "/keys/" }}
   <a class="active" href="/keys/">~/keys</a>
   {{ else }}
   <a href="/keys/">~/keys</a>
   {{ end }}
-  <!--.-->
   <!--.-->
 </small>
 
