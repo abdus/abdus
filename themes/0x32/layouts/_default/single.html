@@ -6,6 +6,30 @@
   <small>{{ .Date.Format "2 June, 2006" | upper }}</small>
   {{ end }}
 </div>
+{{ if .Param "sources" }}
+<div style="margin-bottom: 3rem;">
+  {{ range .Param "sources" }}
+  <a
+    style="
+      display: inline-block;
+      color: gray;
+      text-decoration: none;
+      font-size: 0.9em;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      max-width: 100%;
+      line-height: 1;
+    "
+    href="{{ . }}"
+  >
+    <i style="font-size: 0.75em; color: lightgray;" class="fas fa-link"></i>
+    &nbsp; {{ . }}</a
+  > 
+  {{ end }}
+</div>
+{{ end }}
+<!--main content-->
 <div class="section-content" style="color: #252525;">
   {{ .Content }}
 </div>
@@ -71,12 +95,12 @@
   }
 
   try {
-    annotateElement("em", "circle", "#1aa6e9");
+    annotateElement("em", "underline", "blue");
     annotateElement("strong", "highlight", "yellow");
     annotateElement("del", "strike-through", "#ff0000");
     annotateNestedElement("em > del", "crossed-off", "#ff0000");
     annotateNestedElement("em > strong", "box", "lawngreen");
-    annotateNestedElement("em > em", "underline", "blue");
+    annotateNestedElement("em > em", "circle", "#1aa6e9");
   } catch (exception) {
     console.log(exception.message);
   }
