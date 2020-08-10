@@ -10,6 +10,17 @@
   {{ .Content }}
 </div>
 
+<div style="margin-top: 2rem;">
+  {{ range .Param "tags" }}
+  <a
+    style="border: 0; font-size: 0.8em; padding: 0 4px; text-decoration: none;"
+    href="/tags/{{ . | urlize }}"
+  >
+    <i class="fas fa-tags" style="font-size: 0.7em; color: gray;"></i>
+    &nbsp;{{ . | urlize }}
+  </a>
+  {{ end }}
+</div>
 <!--  List prev post and next post -->
 <div style="margin-top: 5rem;">
   {{ if .NextInSection }}
