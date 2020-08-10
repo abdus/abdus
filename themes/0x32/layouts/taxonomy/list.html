@@ -1,0 +1,32 @@
+{{ define "main" }}
+<main>
+  <div>
+    <h1>{{ .Title }}</h1>
+
+    {{ range .Data.Terms }}
+    <a class="taxonomy-term" href="{{ .Page.Permalink }}"
+      >{{ .Page.Title | urlize }} <small>{{ .Count }}</small>
+    </a>
+    {{ end }}
+  </div>
+</main>
+
+<style>
+  .taxonomy-term {
+    padding: 0.3rem 0.7rem;
+    margin: 0.2rem auto;
+    border: 1px solid lightgray;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 0.4rem; 
+  }
+
+  .taxonomy-term small {
+    border-radius: 50%;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: red;
+  }
+</style>
+{{ end }}

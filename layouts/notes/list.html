@@ -13,9 +13,7 @@
     <td style="text-align: center;">
       {{ .Date.Format "02/01/06" }}
     </td>
-    <td>
-      <a href="{{ .Permalink | absURL }}">{{ .Title }}</a>
-    </td>
+    <td><a href="{{ .Permalink | absURL }}">{{ .Title }}</a> &nbsp;</td>
 
     {{ if .Param "categories" }}
     <td style="text-align: center;">
@@ -28,9 +26,10 @@
     {{ end }} {{ if .Param "sources" }}
     <!--.-->
     <td style="text-align: center;">
-      {{ range .Param "sources" }}
-      <a href="{{ . }}">link</a>
-      {{ end }}
+      {{ range $index, $source := .Param "sources" }}
+      <a href="{{ $source }}"
+        >link{{ add $index 1 }}</a
+      >{{ end }}
     </td>
     <!--.-->
     {{ else }}

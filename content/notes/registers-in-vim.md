@@ -4,6 +4,9 @@ date: 2020-07-26T08:55:22+05:30
 draft: false
 tags: [vim, neovim, editor]
 categories: [vim, neovim]
+sources:
+  - https://www.tutorialspoint.com/vim/vim_registers.htm
+  - https://www.brianstorti.com/vim-registers/
 ---
 
 - Registers in Vim are simply **different locations** where Vim could store texts.
