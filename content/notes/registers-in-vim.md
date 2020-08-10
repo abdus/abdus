@@ -56,7 +56,7 @@ content which was **previously stored in it, would be overriden**. In case of
 
 #### Numbered Register
 
-Denoted by numbers **0** to **9**. These registers stores previously yanked and
+Denoted by numbers _0_ to _9_. These registers stores previously yanked and
 deleted content. Register **0 would store the latest yank**. And register **1 to 9
 would store the last 9 deleted texts**(even after shutdown and reboot). 1 being
 the latest and 9 the oldest delete.

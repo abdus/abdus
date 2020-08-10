@@ -6,7 +6,7 @@
   <small>{{ .Date.Format "2 June, 2006" | upper }}</small>
   {{ end }}
 </div>
-<div style="color: #252525;">
+<div class="section-content" style="color: #252525;">
   {{ .Content }}
 </div>
 
@@ -22,5 +22,65 @@
   >
   {{ end }}
 </div>
+
+<!--load rough-notation if the section is "notes"-->
+{{ if eq .Section "notes" }}
+<script type="module">
+  import { annotate } from "https://unpkg.com/rough-notation?module";
+
+  function checkParent(elem) {
+    const parent = elem.parentElement;
+    const strong = document.createElement("strong");
+    const em = document.createElement("em");
+    const del = document.createElement("del");
+    console.log(elem.hasChildNodes(), elem);
+
+    if (
+      parent.constructor === strong.constructor ||
+      parent.constructor === em.constructor ||
+      parent.constructor === del.constructor
+    )
+      return false;
+    if (elem.childElementCount > 0) return false;
+    return true;
+  }
+
+  function annotateElement(selector, type, color) {
+    document.querySelectorAll(selector).forEach((elem) => {
+      const shouldAllowAnnotation = checkParent(elem);
+      if (shouldAllowAnnotation)
+        annotate(elem, { type, color, multiline: true, animate: false }).show();
+    });
+  }
+
+  function annotateNestedElement(selector, type, color) {
+    document.querySelectorAll(selector).forEach((elem) => {
+      annotate(elem, { type, color, multiline: true, animate: false }).show();
+    });
+  }
+
+  try {
+    annotateElement("em", "circle", "#1aa6e9");
+    annotateElement("strong", "highlight", "yellow");
+    annotateElement("del", "strike-through", "#ff0000");
+    annotateNestedElement("em > del", "crossed-off", "#ff0000");
+    annotateNestedElement("em > strong", "box", "lawngreen");
+    annotateNestedElement("em > em", "underline", "blue");
+  } catch (exception) {
+    console.log(exception.message);
+  }
+</script>
+
+<style>
+  .section-content em,
+  .section-content strong,
+  .section-content del {
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+  }
+</style>
+
+{{ end }}
 <!--.-->
 {{ end }}

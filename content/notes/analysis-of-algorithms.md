@@ -9,9 +9,9 @@ sources:
   - https://www.geeksforgeeks.org/analysis-of-algorithms-set-1-asymptotic-analysis/
 ---
 
-
 why **performance analysis**? because it is important for a software to
-{{< h >}}scale{{</ h >}}
+_scale_
+
 
 ### Asymptotic Analysis
 
