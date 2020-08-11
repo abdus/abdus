@@ -54,7 +54,11 @@ rel="stylesheet" href={{"/css/syntax.css" | absURL }} media="all">
 <meta property="og:url" content="{{ .Permalink | absURL }}" />
 <meta property="og:title" content="{{ .Page.Title }} | {{ .Site.Title }}" />
 <meta property="og:description" content='{{ .Scratch.Get "desc" }}' />
-<meta property="og:image" content='{{ .Scratch.Get "image" }}' />
+<meta
+  property="og:image"
+  itemprop="image primaryImageOfPage"
+  content='{{ .Scratch.Get "image" }}'
+/>
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
