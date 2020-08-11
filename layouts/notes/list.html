@@ -48,6 +48,10 @@
     const table_raws = [...document.querySelectorAll("tr")];
     table_raws.shift();
 
+    document.addEventListener("keypress", () => {
+      document.querySelector("#search-box").focus();
+    });
+
     document.querySelector("#search-box").addEventListener("input", (e) => {
       const search_text = e.target.value
         ? e.target.value.trim().toLowerCase()
