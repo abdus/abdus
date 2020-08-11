@@ -25,7 +25,7 @@
   >
     <i style="font-size: 0.75em; color: lightgray;" class="fas fa-link"></i>
     &nbsp; {{ . }}</a
-  > 
+  >
   {{ end }}
 </div>
 {{ end }}
@@ -84,23 +84,29 @@
     document.querySelectorAll(selector).forEach((elem) => {
       const shouldAllowAnnotation = checkParent(elem);
       if (shouldAllowAnnotation)
-        annotate(elem, { type, color, multiline: true, animate: false }).show();
+        annotate(elem, { type, color, multiline: true }).show();
     });
   }
 
   function annotateNestedElement(selector, type, color) {
     document.querySelectorAll(selector).forEach((elem) => {
-      annotate(elem, { type, color, multiline: true, animate: false }).show();
+      annotate(elem, {
+        type,
+        color,
+        multiline: true,
+        brackets: ["left", "right", "top", "bottom"],
+      }).show();
     });
   }
 
   try {
-    annotateElement("em", "underline", "blue");
+    annotateElement("em", "underline", "#2196f3");
     annotateElement("strong", "highlight", "yellow");
     annotateElement("del", "strike-through", "#ff0000");
     annotateNestedElement("em > del", "crossed-off", "#ff0000");
     annotateNestedElement("em > strong", "box", "lawngreen");
-    annotateNestedElement("em > em", "circle", "#1aa6e9");
+    annotateNestedElement("em > em", "circle", "#ff000080");
+    annotateNestedElement("blockquote", "bracket", "#da3bf1");
   } catch (exception) {
     console.log(exception.message);
   }
@@ -113,6 +119,12 @@
     font-style: normal;
     font-weight: normal;
     text-decoration: none;
+  }
+
+  blockquote {
+    background-color: #fff;
+    padding: 0.3rem;
+    margin: 2rem 0;
   }
 </style>
 
