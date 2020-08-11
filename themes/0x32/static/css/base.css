@@ -122,3 +122,43 @@ tr:nth-child(even) {
     font-size: 1.1em;
     color: red;
   }
+
+  div.logo {
+    padding: 0.7rem 1rem;
+    font-family: monaco;
+    display: inline-block;
+    border-radius: 0.4rem;
+    text-align: center;
+    margin: 1rem auto;
+    text-shadow: 6px 6px 3px #bdbdbd;
+    font-size: 1.3em;
+  }
+
+  div.logo span {
+    color: #00ff00;
+  }
+
+  div.logo span:nth-child(2) {
+    color: #796b01;
+  }
+
+  .top-nav {
+    display: block;
+    max-width: var(--max-content-width);
+    text-align: left;
+    padding: 0.3rem;
+    font-family: Monaco, monospace;
+    margin: auto;
+  }
+
+  .top-nav a {
+    font-size: 0.8em;
+    margin: 0 10px;
+    color: gray;
+    text-decoration: none;
+  }
+
+  .top-nav a.active {
+    color: #a70000;
+    font-weight: bold;
+  }
