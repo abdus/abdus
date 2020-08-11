@@ -26,5 +26,5 @@ tabWidth = 2
 
 [permalinks]
 pages = "/:filename"
-blogs = "/:year/:title/"
-notes = "/note/:filename"
+posts = "/:year/:title/"
+notes = "/notes/:filename"
