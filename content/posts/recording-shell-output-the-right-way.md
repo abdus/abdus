@@ -8,7 +8,7 @@ meta:
 featured: false # feature a post in homepage
 tableofcontents: true # whether to generate ToC
 tags: ['tools', 'shell-recording', 'asciinema']
-categories: ['cli']
+categories: ['linux']
 ---
 
 > TL,DR; go and install `asciinema` from [asciinema.org](https://asciinema.org) and start recording your terminal sessions.

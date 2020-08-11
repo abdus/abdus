@@ -3,7 +3,7 @@ title: "Registers in Vim"
 date: 2020-07-26T08:55:22+05:30
 draft: false
 tags: [vim, neovim, editor]
-categories: [vim, neovim]
+categories: [tools]
 sources:
   - https://www.tutorialspoint.com/vim/vim_registers.htm
   - https://www.brianstorti.com/vim-registers/

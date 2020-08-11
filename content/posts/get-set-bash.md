@@ -8,7 +8,7 @@ meta:
 featured: false # feature a post in homepage
 tableofcontents: true # whether to generate ToC
 tags: ["bash", "cli"]
-categories: ["note-to-self", "linux"]
+categories: ["linux"]
 ---
 
 **Bruno Again Shell**, _aka_ BASH, is an interpreter developed by GNU Foundation.

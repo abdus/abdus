@@ -3,7 +3,7 @@ title: "Get Your Own Heroku - a Guide on How to Run a Custom 'PaaS' for deployin
 date: 2020-04-26T11:05:04+05:30
 draft: false
 tags: ['paas', 'heroku', 'node.js', 'vps', 'custom platform']
-categories: ['PaaS']
+categories: ['cloud']
 ---
 
 Heroku is a fantastic platform for Node.js developers. It made deployment

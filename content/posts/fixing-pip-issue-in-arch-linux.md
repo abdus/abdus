@@ -2,8 +2,8 @@
 title: "Fixing PIP Issue in Arch Linux"
 date: 2020-04-01T22:43:30+05:30
 draft: false
-categories: ['arch linux', 'python']
-tags: ['pip', 'arch linux', 'pacman']
+categories: ['linux',]
+tags: ['pip', 'arch-linux', 'pacman', 'python']
 ---
 
 

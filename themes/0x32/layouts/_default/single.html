@@ -3,8 +3,18 @@
 <div style="text-align: center; margin: 3rem 0 3rem 0;">
   <h2>{{.Title }}</h2>
   {{ if .Date }}
-  <small>{{ .Date.Format "2 June, 2006" | upper }}</small>
+  <small
+    >{{ .Date.Format "2 June, 2006" | }}&nbsp;&nbsp;&middot;&nbsp;&nbsp;</small
+  >
   {{ end }}
+  <!--.-->
+  <small>
+    {{ range .Param "categories" }}
+    <a style="text-decoration: none;" href="/categories/{{ . | urlize }}"
+      >{{ . | title }}</a
+    >
+    {{ end }}
+  </small>
 </div>
 {{ if .Param "sources" }}
 <div style="margin-bottom: 3rem;">
@@ -35,12 +45,12 @@
 </div>
 
 <div style="margin-top: 2rem;">
+  <i class="fas fa-tags" style="font-size: 0.7em; color: gray;"></i>
   {{ range .Param "tags" }}
   <a
     style="border: 0; font-size: 0.8em; padding: 0 4px; text-decoration: none;"
     href="/tags/{{ . | urlize }}"
   >
-    <i class="fas fa-tags" style="font-size: 0.7em; color: gray;"></i>
     &nbsp;{{ . | urlize }}
   </a>
   {{ end }}
@@ -84,7 +94,7 @@
     document.querySelectorAll(selector).forEach((elem) => {
       const shouldAllowAnnotation = checkParent(elem);
       if (shouldAllowAnnotation)
-        annotate(elem, { type, color, multiline: true }).show();
+        annotate(elem, { type, color, multiline: true, animate: false }).show();
     });
   }
 
@@ -94,6 +104,7 @@
         type,
         color,
         multiline: true,
+        animate: false,
         brackets: ["left", "right", "top", "bottom"],
       }).show();
     });

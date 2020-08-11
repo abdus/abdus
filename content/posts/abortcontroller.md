@@ -11,7 +11,7 @@ tags:
   - javascript
   - dom
 categories:
-  - web
+  - javascript
 tableofcontents: true
 ---
 
