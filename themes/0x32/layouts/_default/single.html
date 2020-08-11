@@ -68,6 +68,8 @@
   {{ end }}
 </div>
 
+{{ partial "json-ld.html" . }}
+
 <!--load rough-notation if the section is "notes"-->
 {{ if eq .Section "notes" }}
 <script type="module">
