@@ -20,7 +20,6 @@
         <th>Date</th>
         <th style="text-align: left;">Title</th>
         <th>Category</th>
-        <th>Source(s)</th>
       </tr>
     </thead>
     {{ range sort .Pages.ByTitle }}
@@ -36,15 +35,6 @@
         <a href="/categories/{{ . | urlize }}/">{{ . }}</a>
         {{ end }}
       </td>
-      {{ else }}
-      <td></td>
-      {{ end }} {{ if .Param "sources" }}
-      <!--.-->
-      <td style="text-align: center;">
-        {{ range $index, $source := .Param "sources" }}
-        <a href="{{ $source }}">link{{ add $index 1 }}</a>{{ end }}
-      </td>
-      <!--.-->
       {{ else }}
       <td></td>
       {{ end }}
