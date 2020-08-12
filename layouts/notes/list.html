@@ -44,19 +44,16 @@
 </div>
 
 <script>
+  "use strict";
+  // search functionality
   (() => {
+    // check if url have any query parameters
+    const query = new URLSearchParams(window.location.search).get("q");
+
     const table_raws = [...document.querySelectorAll("tr")];
     table_raws.shift();
 
-    document.addEventListener("keypress", () => {
-      document.querySelector("#search-box").focus();
-    });
-
-    document.querySelector("#search-box").addEventListener("input", (e) => {
-      const search_text = e.target.value
-        ? e.target.value.trim().toLowerCase()
-        : e.target.value;
-
+    function performSearch(search_text) {
       for (let t of table_raws) {
         const text = t
           .querySelector("td:nth-child(2)")
@@ -65,6 +62,25 @@
           t.style.display = "table-row";
         } else t.style.display = "none";
       }
+    }
+
+    document.addEventListener("keypress", () => {
+      document.querySelector("#search-box").focus();
+    });
+
+    // search
+    if (query) {
+      let removeDash = query.replace("-", " ");
+      document.querySelector("#search-box").value = removeDash;
+      performSearch(removeDash);
+    }
+
+    document.querySelector("#search-box").addEventListener("input", (e) => {
+      const search_text = e.target.value
+        ? e.target.value.trim().toLowerCase()
+        : e.target.value;
+
+      performSearch(search_text);
     });
   })();
 </script>
