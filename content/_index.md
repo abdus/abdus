@@ -10,3 +10,7 @@ meta:
 ---
 
 {{< list-posts >}}
+
+
+<!--mastodon verification-->
+<a rel="me" href="https://linuxrocks.online/@abdus"></a>
