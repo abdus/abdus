@@ -43,6 +43,7 @@
   {{ .Content }}
 </div>
 
+{{ if .Param "tags" }}
 <div style="margin-top: 2rem;">
   <i class="fas fa-tags" style="font-size: 0.7em; color: gray;"></i>
   {{ range .Param "tags" }}
@@ -54,6 +55,7 @@
   </a>
   {{ end }}
 </div>
+{{ end }}
 <!--  List prev post and next post -->
 <div style="margin-top: 5rem;">
   {{ if .NextInSection }}
