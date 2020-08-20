@@ -23,7 +23,7 @@ ReadMe does not support JavaScript yet).
 
 There was only one thing to figure out. How to create beautiful status cards
 with limited CSS! I knew I could use SVG and make whatever I want. But not
-all browser supports each and every feature of SVG yet. So, generating and
+all browser supports every feature of SVG yet. So, generating and
 storing SVG codes as images may not always work.
 
 Since GitHub has introduced workflows(better be late than never), I chose to
@@ -32,9 +32,9 @@ render SVG on a webpage and convert them to PNG, all in Server-side.
 This way, I am assured that SVG would be rendered in the latest browser and
 converted PNG. But how do I do it?
 
-There is a package called [Puppeteer](#) in the NPM registry. This library gives
+There is a package called [Puppeteer](https://github.com/puppeteer/puppeteer) in the NPM registry. This library gives
 the user a way to control Chromium/Firefox browser programmatically. This,
-by default, runs browser in headless mode. So, user would be able to run it
+by default, runs browser in headless mode. So, the user would be able to run it
 without a Desktop Environment.
 
 ## Getting 'Toots' from Mastodon
@@ -85,3 +85,5 @@ Sure, this thing was just for fun. But I learnt quite a few new things.
 
 If you liked this, I would be happy if you **star 🌟 [this repository](https://github.com/abdus/abdus)**.
 You can follow me on Mastodon. My handle is **@abdus@linuxrocks.online**.
+
+_Also published in [dev.to](https://dev.to/abdus/using-github-profile-readme-as-twitter-like-feed-25k4)_
