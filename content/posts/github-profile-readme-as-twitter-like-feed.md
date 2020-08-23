@@ -3,7 +3,7 @@ title: "Using Github Profile Readme as 'Twitter-like' Feed"
 date: 2020-08-20T06:46:55+05:30
 draft: false
 meta:
-  image: # url to image. Important for blog listing and seo
+  image: https://dev-to-uploads.s3.amazonaws.com/i/lk63wznpuwhi5mzcgtkh.png # url to image. Important for blog listing and seo
   description: # overrides .Summary
 featured: false # feature a post in homepage
 tableofcontents: true # whether to generate ToC
