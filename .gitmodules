@@ -1,0 +1,3 @@
+[submodule "themes/hugo-theme-fiber"]
+	path = themes/hugo-theme-fiber
+	url = git@github.com:abdus/hugo-theme-fiber.git

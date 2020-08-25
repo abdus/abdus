@@ -2,10 +2,40 @@ baseURL = "https://abdus.xyz"
 languageCode = "en-us"
 title = "Abdus S. Azad"
 
-theme = "0x32"              # theme name
+theme = "hugo-theme-fiber"              # theme name
 disableKinds = []           # disable stuffs
 enableGitInfo = true        # valuable git information
 enableEmoji = true          # enables emoji support in content files
+
+[params]
+  title = "abdus.xyz"
+
+[menu]
+
+  [[menu.main]]
+    identifier = "me"
+    name = "Me"
+    url = "/me/"
+    weight = 10
+
+
+  [[menu.main]]
+    identifier = "keys"
+    name = "keys"
+    url = "/keys/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "categories"
+    name = "categories"
+    url = "/categories"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "notes"
+    name = "notes"
+    url = "/notes/"
+    weight = 10
 
 [markup]
 [markup.tableOfContents]
