@@ -9,8 +9,3 @@ meta:
     (Neo)Vim for Life! ♥
 ---
 
-{{< list-posts >}}
-
-
-<!--mastodon verification-->
-<a rel="me" href="https://linuxrocks.online/@abdus"></a>

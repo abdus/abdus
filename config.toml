@@ -9,6 +9,7 @@ enableEmoji = true          # enables emoji support in content files
 
 [params]
   title = "abdus.xyz"
+  mainSections = ["posts"]
 
 [menu]
 
