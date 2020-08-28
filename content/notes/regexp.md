@@ -1,7 +1,7 @@
 ---
 title: "Regular Expression"
 date: 2020-08-28T00:53:22+05:30
-draft: true
+draft: false
 tags: []
 categories: [misc]
 sources:
@@ -53,5 +53,19 @@ to find a **specific pattern in a text**.
 | `^`                     | beginning of the input                                                         |
 | `$`                     | end of the input                                                               |
 
-- set **character range** by using **hyphen** inside character class.
+### Things to Remember
+
+set **character range** by using **hyphen** inside character class.
 Example: `/[a-z0-9]/`.
+
+a **period inside a char set** means a literal period
+
+**the `*` (star) with a `.` (dot)** can be used to **match any string of
+characters**. Example: `.*`
+
+braces(also called **quantifiers**) are used to specify the **number of times**
+a character or a group of character **can be repeated**.
+Examples: 
+- `[0-9]{3}` - matches _**exactly 3 digits**_.
+- `[a-z]{2,}` - matches _**between 2 and unlimited**_ times
+- `[A-Z]{2, 5}` - matches between _**3 and 5 times**_
