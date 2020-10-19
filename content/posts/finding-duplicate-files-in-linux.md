@@ -25,12 +25,12 @@ end up getting a few of them. Going through the whole file system and finding
 them one by one is a tedious job. And no sane person would ever think of doing
 that manually when the file count is literally in thousands.
 
-Filtering them out and removing is quite easy though. All you need to do is 
+Filtering them out and removing is quite easy though. All you need to do is
 install some tools like [`rdfind`](https://rdfind.pauldreik.se/), [`fslint`](https://www.pixelbeat.org/fslint/) etc. Run a few commands, and
 duplicates would vanish. [Here is a guide](https://www.tecmint.com/find-and-delete-duplicate-files-in-linux/) to help you out.
 
 If that's what you are here for, you won't have to read any further. Download
-any one of those tools and get your job done. This post emphasizes on how to 
+any one of those tools and get your job done. This post emphasizes on how to
 **build one such tool** for your use :)
 
 ## 1. Comparing File Content
@@ -90,14 +90,14 @@ For a given object(like ASCII characters, binary files etc), the generated hash
 would always be the same. Change a character(even space), and it would differ.
 
 Generation of hash is done by using algorithms. You feed an algorithm
-with data, and it calculates the hash value of that data. There are 
+with data, and it calculates the hash value of that data. There are
 so many hashing algorithms that are available out there. A few among them are
 SHA, BlowFish, MD5 etc which are quite popular.
 
 One more unique thing about hash is, it is irreversible. You can't extract the
 content from which the hash was generated.
 
-> Note that, this method won't give much better result over the previous method as hashing is a slow process and it *does* consume a lot of resources.
+> Note that, this method won't give much better result over the previous method as hashing is a slow process and it _does_ consume a lot of resources.
 
 In Linux, there are tools for generating a hash of any given files. In most of the
 distributions, they are pre-installed.
@@ -114,7 +114,7 @@ do
   for g in `ls -p | grep -v /`
   do
     g_sha=`sha1sum "$g" | awk '{ print $1 }'`
-    
+
     if [[ $f_sha == $g_sha && $f != $g ]]; then
       # duplicate
       echo "SAME: $f === $g";
@@ -142,12 +142,13 @@ two `for` loops. This would also reduce time complexity.
 
 I am not using file content as key in hashtable. I could have stored either
 a file name or file content as a key. But neither of then would work.
+
 - Two files would never have the same name under a single context.
 - File content could be of any type, ranging from ASCII to Multimedia etc.
-This does not make it ideal for using as Key.
+  This does not make it ideal for using as Key.
 - Just imagine, what if the file size is huge.. HUGE? like 2 or 3 GB! Or more!
-it would increase the space needed by the program to run, ultimately increasing
-the resource consumption.
+  it would increase the space needed by the program to run, ultimately increasing
+  the resource consumption.
 
 So, I will be using SHA1SUM(generated using `sha1sum` tool) as key. For value,
 I would just set it to `true` since it does not matter what value it

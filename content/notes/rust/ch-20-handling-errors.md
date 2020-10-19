@@ -1,5 +1,5 @@
 ---
-title: 'Handling Errors'
+title: "Handling Errors"
 date: 2020-08-12T12:03:43+05:30
 draft: true
 tags: [error, error handling]
@@ -24,7 +24,6 @@ sources: []
 -->
 
 two kind of errors in Rust:
+
 - **recoverable**, which are of type `Result<T, E>`
 - **unrecoverable**, with `panic!()` macro
-
-WIP
