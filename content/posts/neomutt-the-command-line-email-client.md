@@ -3,7 +3,7 @@ title: "NeoMutt: the Command Line Email Client"
 date: 2020-10-20T14:07:39+05:30
 draft: false
 meta:
-  image: https://i.ibb.co/CQd97dh/bonsai.png # url to image. Important for blog listing and seo
+  image: https://i.ibb.co/rFj4XY0/pipes.png # url to image. Important for blog listing and seo
   description: # overrides .Summary
 featured: false # feature a post in homepage
 tags: [mutt, email]
@@ -13,7 +13,7 @@ categories: [tools]
 Mutt is a command-line email client which can connect to IMAP/POP3 and SMTP
 protocols as well as read emails from local directories.
 
-![https://i.ibb.co/CQd97dh/bonsai.png](https://i.ibb.co/CQd97dh/bonsai.png)
+![https://i.ibb.co/rFj4XY0/pipes.png](https://i.ibb.co/rFj4XY0/pipes.png)
 
 So, how do I stumbled upon it? I am trying to optimize my workflow. Having to
 click around a GUI-based email client isn't my thing. So, I look for
