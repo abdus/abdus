@@ -1,5 +1,5 @@
 ---
-title: 'Resources to Learn JavaScript'
+title: "Resources to Learn JavaScript"
 date: 2020-07-26T19:01:58+05:30
 draft: true
 meta:
@@ -14,8 +14,8 @@ categories: [javaScript]
 Before you go through the resources, you should have a basic understanding about
 what JavaScript is, what it does .. etc.
 
-JavaScript is one of the core languages used for building anything on web, 
-originally designed by Branden Eich at Netscape. JavaScript(known as LiveScript, 
+JavaScript is one of the core languages used for building anything on web,
+originally designed by Branden Eich at Netscape. JavaScript(known as LiveScript,
 back then) was first shipped with Netscape Navigator, making Netscape Navigator
 the first browser to support dynamic web pages. This all happened at 1995.
 
@@ -23,8 +23,8 @@ Fast-forward to 2009, ECMA International standardized the language specs and
 released ECMAScript 5(_a.k.a_ ES5), which was widely adopted by everyone.
 
 > Ecma International is an industry association founded in 1961 and dedicated
-to the standardization of Information and Communication Technology (ICT) and
-Consumer Electronics (CE).
+> to the standardization of Information and Communication Technology (ICT) and
+> Consumer Electronics (CE).
 
 ## Resources
 
