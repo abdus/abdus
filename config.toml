@@ -1,4 +1,4 @@
-baseURL = "https://abdus.xyz"
+baseURL = "https://abdus.net"
 languageCode = "en-us"
 title = "Abdus S. Azad"
 
@@ -8,7 +8,7 @@ enableGitInfo = true        # valuable git information
 enableEmoji = true          # enables emoji support in content files
 
 [params]
-  title = "abdus.xyz"
+  title = "abdus.net"
   mainSections = ["posts"]
 
 [menu]
