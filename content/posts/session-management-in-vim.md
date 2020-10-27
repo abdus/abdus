@@ -3,7 +3,7 @@ title: "Session Management in Vim"
 date: 2020-10-26T16:22:18+05:30
 draft: false
 meta:
-  image: # url to image. Important for blog listing and seo
+  image: https://i.ibb.co/HYtd6Bf/pipes.png
   description: # overrides .Summary
 featured: false # feature a post in homepage
 tableofcontents: true # whether to generate ToC
@@ -14,6 +14,8 @@ categories: [tools]
 If you ask me about the most underrated feature in Vim, my answer would be
 'Session Management' straightaway! Just like any other "modern" editors, Vim
 does support sessions.
+
+![pipes](https://i.ibb.co/HYtd6Bf/pipes.png)
 
 ## What is a Session
 
@@ -64,8 +66,8 @@ want. That session does not make any sense.
 
 So, if a session file is not created automatically, how do I create it then? 
 Well, it's really simple. I defined a command for creating new Sessions, called
-`SessCreate` using [Vim Language](#). Now, I can simply call this command from
-inside Vim whenever I need it.
+`SessCreate` using [Vim Language](http://vimdoc.sourceforge.net/htmldoc/usr_41.html).
+Now, I can simply call this command from inside Vim whenever I need it.
 
 Let me show you how I did it.
 
@@ -173,7 +175,8 @@ if bufexists(1)
 endif
 ```
 
-`bufexists()` function checks if any [buffer](#) exists. `bufnr()` returns all
+`bufexists()` function checks if any
+[buffer](https://vim.fandom.com/wiki/Buffers) exists. `bufnr()` returns all
 available buffers. ...and so on. Read more about them using `:help FUNC_NAME`
 in Vim.
 
