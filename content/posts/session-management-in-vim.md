@@ -18,50 +18,52 @@ does support sessions.
 ## What is a Session
 
 Before I go in-depth, let me explain what exactly is a Session in Vim. Simply
-put: Session is the contigious amout of time you have work in Vim. If I have
-opened a project and worked for an hour, and then closed it. My Vim session
-would be one hour long.
+put(from `:help session`): A Session keeps the Views for all windows, plus the global settings.
 
-Sessions in Vim are not presistent by default. One have to make it persistant.
-Most people does not know about it because they probably have never felt the
+An example of session could be: If I have opened a project and worked for an
+hour, and then closed it. My Vim session would be one hour long.
+
+Sessions in Vim are not persistent by default. One has to make it persistent.
+Most people do not know about it because they probably have never felt the
 need for it.
 
-I was one those people who didn't feel the need of storing sessions, until
-recently. And I am not ashamed of it. It just happens...
+I was one of those people who didn't feel the need for storing sessions, until
+recently. And I am not ashamed of it. It just happens... mostly because, we
+don't need it _yet_.
 
 ## Importance of Session
 
-To answer the question 'How a persistant Session is Useful', let's find out what
+To answer the question 'How a persistent Session is Useful', let's find out what
 we lack without it.
 
-1. **Time**. Yes! Imagine, you are working on a project, and for some reason you
-   closed Vim. So when you open it again, you gotta recreate those perfetcly
-   sized windows, open files etc etc.
+1. **Time**. Yes! Imagine, you are working on a project, and for some reason,
+   you closed Vim. So when you open it again, you gotta recreate those perfectly
+   sized windows, open files of reconfigure options etc.
 2. **Context**. It's not easy to remember which file you were editing, the last
    time you have worked on a project.
 
-Now, what if I say that you could boot into Vim without loosing any of the
-previous windows, tabs etc etc? not even the cursor location. That would be
+Now, what if I say that you could boot into Vim without losing any of the
+previous windows, tabs etc? not even the cursor location. That would be
 great, is not it?
 
-That's where persistant session comes into action. It enables Vim to load
+That's where persistent session comes into action. It enables Vim to load
 the last session, much like what we see in editors like Visual Studio Code.
 
 ## Storing Sessions
 
-There are multiple technique one may use to handle Sessions. I will, however,
+There are multiple techniques one may use to handle Sessions. I will, however,
 talk about the one I use.
 
 First, I let Vim look for any existing session files. If one exists for the
-current session, Vim would update it automatically when I close Vim. Reason I
-don't let Vim save Sessions for which no session file exists, because that makes
-me counter-productive. For example, I needed to edit a config file, say,
+current session, Vim would update it automatically when I close Vim. The Reason
+I don't let Vim save Sessions for which no session file exists, because that
+makes me counter-productive. For example, I needed to edit a config file, say,
 `.vimrc` from my `$HOME` directory. Had I enabled auto-create session file, a
 new session file for `$HOME` directory will be created, which I obviously don't
 want. That session does not make any sense.
 
-So, if session file is not created automatically, how do I create it then? Well,
-it's really simple. I defined a command for creating new Sessions, called
+So, if a session file is not created automatically, how do I create it then? 
+Well, it's really simple. I defined a command for creating new Sessions, called
 `SessCreate` using [Vim Language](#). Now, I can simply call this command from
 inside Vim whenever I need it.
 
@@ -88,9 +90,9 @@ if !isdirectory(expand("~/.vim/sessions"))
 endif
 ```
 
-Check if a directory `$HOME/.vim.sessions` exists. If not, create it with
+Check if a directory `$HOME/.vim.sessions` exist. If not, create it with
 `execute "call mkdir(expand('~/.vim/sessions', 'p'))"`. This is the directory
-where sessions are stored. An alternatve location for storing session is the
+where sessions are stored. An alternate location for storing session is the
 project directory itself. But that is not something I want to use, as not
 everyone uses Vim. So, this would be an added bloat for them.
 
